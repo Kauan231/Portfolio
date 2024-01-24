@@ -4,7 +4,7 @@ import Hero from './components/Hero'
 import AreasDeAtuacao from './components/AreasDeAtuacao'
 import About from './components/About'
 import Projetos from './components/Projetos'
-
+import Eventos from './components/Eventos'
 
 function App() {
 
@@ -15,6 +15,7 @@ function App() {
     <About/>
     <AreasDeAtuacao/>
     <Projetos/>
+    <Eventos/>
     </>
   )
 }
