@@ -2,7 +2,6 @@ import thumbCurriculum from '../assets/home/projetos/Curriculo.png'
 import thumbStore from '../assets/home/projetos/Store.png'
 import thumbBurguer from '../assets/home/projetos/BurgerIcon.png'
 import thumbSnake from '../assets/home/projetos/Snake.png'
-import thumbEventos from '../assets/home/eventos/Ypê.jpg'
 
 function Card({Title, Description, Image, Link}) {
     return (
@@ -10,7 +9,7 @@ function Card({Title, Description, Image, Link}) {
             <div style={{backgroundImage: "url('" + Image + "')"}} className='h-[50vh]  w-full bg-cover rounded-[2vh]'></div>
             <div className='p-10 w-full mb-auto'>
                 <span className='font-semibold text-2xl underline underline-offset-2'>{Title}</span>
-                <p className='mt-5 text-lg'>{Description}</p>
+                <p className='mt-5 text-lg font-medium'>{Description}</p>
                 
             </div>
             <a href={Link} className='bg-gray-900 mt-5 rounded-2xl text-center p-3 w-full'>
@@ -23,7 +22,7 @@ function Card({Title, Description, Image, Link}) {
 export default function Projetos() {
     return (
         <>
-        <div className='pb-24 bg-stone-100'/>
+        <div className='pb-24 bg-stone-100' id='projetos'/>
         <div className='flex justify-center align-middle bg-stone-100'>
                 <span className='font-semibold text-[3vw] text-center underline underline-offset-1'>Projetos</span>
         </div>
@@ -64,7 +63,8 @@ export default function Projetos() {
             - Arraste e solte os ingredientes na bandeja para adiciona-los ao hamburguer. <br/>
             - Arraste para fora do hamburguer os ingredientes que deseja remover. <br/>
             - O jogo terminará quando todos os pedidos forem atendido ou caso o tempo acabe.  <br/>
-            - Cada pedido é um ScriptableObject com uma lista de três ingredientes necessários para montar o hamburguer. caso o hamburguer montado esteja de acordo com o pedido ganhará 10 pontos, porém caso o pedido não estiver de acordo com o pedido perderá 20 pontos."} 
+            - Cada pedido é um ScriptableObject com uma lista de três ingredientes necessários para montar o hamburguer. 
+            caso o hamburguer montado esteja de acordo com o pedido ganhará 10 pontos, porém caso o pedido não estiver de acordo com o pedido perderá 20 pontos.
             </>
             }
             Image={thumbBurguer}
@@ -85,17 +85,3 @@ export default function Projetos() {
         </>
     )
 }
-
-/*
-<div className='border bg-blue-300 rounded p-10 m-5 rounded-[5vh]'>
-            <div style={{backgroundImage: "url('" + Image + "')"}} className='h-[50vh] w-auto bg-cover mb-5'></div>
-            <div className='grid justify-items-center'>
-                <span className='font-semibold text-2xl underline underline-offset-2'>{Title}</span>
-                <p className='mt-5 text-lg'>{Description}</p>
-                <a href={Link} className='bg-gray-900 w-1/2 p-2 mt-5 rounded-2xl text-center self-baseline'>
-                    <span className='text-white font-extrathin text-2xl'>Ver no Github</span>
-                </a>
-            </div>
-            
-        </div>
-*/

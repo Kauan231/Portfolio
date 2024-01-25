@@ -1,16 +1,33 @@
 import './style/Hero.css'
 import Curriculo from '../assets/home/documentos/Curriculo_KauanRamos.pdf'
-import GithubLogo from '../assets/home/github-mark.svg'
+import { TypeAnimation } from 'react-type-animation';
 
 export default function Hero(){ 
     return (
         <>
         <div className="h-auto w-full grid grid-flow-row grid-cols-5 bg-stone-200 items-center"> 
-                <div className='pl-24 col-span-2'>
+                <div className='pl-24 col-span-2 '>
                     <h1 className="text-[5vw] font-medium text-gray"> Olá,</h1> 
-                    <span className="text-[2vw] font-medium  text-gray pt-5"> Um Desenvolvedor experiente em ...</span> 
-                    
-                    <button className='pt-12' onClick={
+                    <h1 className="text-[2vw] font-medium text-gray opacity-30 text-left"> meu nome é Kauan e sou um...</h1> 
+                    <div>
+                        <h1 className="text-[2vw] font-medium text-gray text-left"> 
+                        <TypeAnimation
+                        sequence={[
+                            // Same substring at the start will only be typed out once, initially
+                            'Desenvolvedor Frontend',
+                            1000, // wait 1s before replacing "Mice" with "Hamsters"
+                            'Desenvolvedor Backend',
+                            1000,
+                            'Desenvolvedor De Jogos',
+                            1000
+                        ]}
+                        wrapper="span"
+                        speed={20}
+                        repeat={Infinity}
+                         />
+                        </h1> 
+                    </div>
+                    <button className='pt-4' onClick={
                         (e) => {
                             e.preventDefault();
                             const link = document.createElement('a');
