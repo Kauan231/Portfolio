@@ -1,11 +1,11 @@
 import thumbCurriculum from '../assets/home/projetos/Curriculo.png'
-import thumbStore from '../assets/home/projetos/Store.png'
+import thumbStore from '../assets/home/projetos/Store.jpg'
 import thumbBurguer from '../assets/home/projetos/BurgerIcon.png'
 import thumbSnake from '../assets/home/projetos/Snake.png'
 
 function Card({Title, Description, Image, Link}) {
     return (
-        <div className='flex flex-col p-5 h-auto bg-blue-300 m-5 rounded-[5vh]'>
+        <div className='flex flex-col p-5 h-auto bg-gray-300 m-5 rounded-[5vh]'>
             <div style={{backgroundImage: "url('" + Image + "')"}} className='h-[50vh]  w-full bg-cover rounded-[2vh]'></div>
             <div className='p-10 w-full mb-auto'>
                 <span className='font-semibold text-2xl underline underline-offset-2'>{Title}</span>
@@ -59,12 +59,10 @@ export default function Projetos() {
             Description={ 
             <>
             Burguer Rush é um jogo teste com a proposta de montar a maior quantia de hamburgueres em 2 minutos.<br/>
-            - Mecânicas: <br/>
+            Mecânicas: <br/>
             - Arraste e solte os ingredientes na bandeja para adiciona-los ao hamburguer. <br/>
             - Arraste para fora do hamburguer os ingredientes que deseja remover. <br/>
             - O jogo terminará quando todos os pedidos forem atendido ou caso o tempo acabe.  <br/>
-            - Cada pedido é um ScriptableObject com uma lista de três ingredientes necessários para montar o hamburguer. 
-            caso o hamburguer montado esteja de acordo com o pedido ganhará 10 pontos, porém caso o pedido não estiver de acordo com o pedido perderá 20 pontos.
             </>
             }
             Image={thumbBurguer}

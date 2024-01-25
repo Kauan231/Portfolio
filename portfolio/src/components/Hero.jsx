@@ -1,6 +1,7 @@
 import './style/Hero.css'
 import Curriculo from '../assets/home/documentos/Curriculo_KauanRamos.pdf'
 import { TypeAnimation } from 'react-type-animation';
+import ProgrammingPhoto from '../assets/home/Programming.jpeg'
 
 export default function Hero(){ 
     return (
@@ -40,7 +41,7 @@ export default function Hero(){
                     </button>
                 </div>
                 <div id='heroImg' className='col-span-3 pb-[5vh]'>
-                    <img src='http://localhost:5173/src/assets/home/eventos/Yp%C3%AA.jpg'></img>
+                    <img src={ProgrammingPhoto}></img>
                 </div>
         </div>
         </>

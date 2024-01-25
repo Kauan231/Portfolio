@@ -6,6 +6,7 @@ import About from './components/About'
 import Projetos from './components/Projetos'
 import Eventos from './components/Eventos'
 import Contato from './components/Contact'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
     <Projetos/>
     <Eventos/>
     <Contato/>
+    <Footer/>
     </>
   )
 }
