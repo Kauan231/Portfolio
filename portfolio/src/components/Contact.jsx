@@ -7,14 +7,14 @@ export default function Contato() {
         <>
         <div className="bg-stone-200" id="contato">
             <div className='flex justify-center align-middle pt-12'>
-                <span className='font-semibold text-[3vw] text-center underline underline-offset-8'>Contato</span>
+                <span className='font-semibold lg:text-[3vw] text-[6vw] text-center underline underline-offset-8'>Contato</span>
             </div>
             <div className="grid grid-cols-3 pb-12">
                 <div className="justify-center align-middle pt-12">
                     <div>
                         <MdOutlineEmail className="w-full h-[12vh]"/>
                         <div className='flex justify-center align-middle pt-2'>
-                            <span className='font-semibold text-[1.5vw] text-center'>E-mail</span>
+                            <span className='font-semibold lg:text-[1.5vw] text-2xl text-center'>E-mail</span>
                         </div>
                     </div>
                 </div>
@@ -23,7 +23,7 @@ export default function Contato() {
                     <div>
                         <FaWhatsapp className="w-full h-[12vh]"/>
                         <div className='flex justify-center align-middle pt-2'>
-                            <span className='font-semibold text-[1.5vw] text-center'>Whatsapp</span>
+                            <span className='font-semibold lg:text-[1.5vw] text-2xl text-center'>Whatsapp</span>
                         </div>
                     </div>
                 </div>
@@ -32,7 +32,7 @@ export default function Contato() {
                     <div>
                         <FaLinkedin className="w-full h-[12vh]"/>
                         <div className='flex justify-center align-middle pt-2'>
-                            <span className='font-semibold text-[1.5vw] text-center'>LinkedIn</span>
+                            <span className='font-semibold lg:text-[1.5vw] text-2xl text-center'>LinkedIn</span>
                         </div>
                     </div>
                 </div>
@@ -43,3 +43,4 @@ export default function Contato() {
         </>
     )
 }
+

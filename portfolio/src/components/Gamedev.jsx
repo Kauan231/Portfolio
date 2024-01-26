@@ -1,10 +1,10 @@
 export default function Gamedev(){
     return (
         <>
-            <div className="h-auto w-full  justify-center items-center grid grid-cols-4 mt-12"> 
-                <span className="text-4xl col-span-1  p-10 text-right">GameDev </span>
-                <div className="col-span-3 ml-5">
-                    <aside className="text-xl text-justify pr-24 border-black border-l-4 pl-2">
+            <div className="h-auto w-full justify-center items-center lg:grid lg:grid-cols-4 mt-12"> 
+                <span className="lg:text-4xl text-xl col-span-1 p-10 underline underline-offset-4 lg:no-underline lg:text-right">GameDev </span>
+                <div className="col-span-3 lg:ml-5">
+                    <aside className="lg:text-xl text-justify lg:pr-24 lg:border-black border-l-4 lg:pl-2 p-4">
                     <b>Com mais de dois anos de experiência como desenvolvedor de jogos, </b> 
                     atuo no desenvolvimento de aplicativos interativos e jogos para eventos corporativos. <br/> <br/>
                     Minha expertise inclui:<br/>
@@ -24,7 +24,7 @@ export default function Gamedev(){
                     Além da experiência profissional, já trabalhei com <b>C++</b> e a API nativa do Windows(Windows.h), criando o jogo Snake.
                     </aside>
                     <br></br>
-                    <span className="text-xl text-justify  font-semibold"> Stack: Unity, C++(Windows.h), Blender, Photoshop, Illustrator</span>
+                    <span className="lg:text-xl text-justify font-semibold p-4"> Stack: Unity, C++(Windows.h), Blender, Photoshop, Illustrator</span>
                 </div>
                 
             </div>

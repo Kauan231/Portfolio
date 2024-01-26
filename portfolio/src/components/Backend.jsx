@@ -1,10 +1,10 @@
 export default function Backend(){
     return (
         <> 
-            <div className="h-auto w-full justify-center items-center grid grid-cols-4 mt-12"> 
-                <span className="text-4xl col-span-1   p-10 text-right">Backend </span>
-                <div className="col-span-3 ml-5">
-                    <aside className="text-xl text-justify  pr-24 border-black border-l-4 pl-2">
+            <div className="h-auto w-full justify-center items-center lg:grid lg:grid-cols-4 mt-12"> 
+                <span className="lg:text-4xl text-xl col-span-1 p-10 underline underline-offset-4 lg:no-underline lg:text-right">Backend </span>
+                <div className="col-span-3 lg:ml-5">
+                    <aside className="lg:text-xl text-justify lg:pr-24 lg:border-black border-l-4 lg:pl-2 p-4">
                     
                     
 Possuo uma sólida experiência na administração de diversos Bancos de Dados, tais como <b>MariaDB</b>, <b>MySQL</b> e  <b>MongoDB</b>, além do uso de Buckets na <b>AWS</b>.
@@ -18,7 +18,7 @@ Além disso, possuo experiência com proxy, notadamente no uso do Nginx.
 
                     </aside>
                     <br></br>
-                    <span className="text-xl text-justify  font-semibold"> Stack: NodeJS, ASP.NET, DB, NGINX</span>
+                    <span className="lg:text-xl text-justify font-semibold p-4"> Stack: NodeJS, ASP.NET, DB, NGINX</span>
                 </div>
                 
                 

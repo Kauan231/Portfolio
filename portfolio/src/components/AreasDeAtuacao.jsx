@@ -9,11 +9,12 @@ export default function AreasDeAtuacao(){
         <div className="bg-stone-100">
             <div className="bg-neutral-300 h-[20vh] w-auto mb-24" id="background"></div>
             <div className='flex justify-center align-middle'>
-                <span className='font-semibold text-[3vw] text-center underline underline-offset-1'>Áreas de Atuação</span>
+                <span className='font-semibold lg:text-[3vw] text-[8vw] text-center underline underline-offset-1'>Áreas de Atuação</span>
             </div>
             <Frontend/>
             <Backend></Backend>
             <Gamedev></Gamedev>
+            <div className='pb-24 bg-stone-100' id='projetos'/>
         </div>
         </>
     )

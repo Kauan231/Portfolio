@@ -22,13 +22,13 @@ function Card({Title, Description, Image, Link}) {
 export default function Projetos() {
     return (
         <>
-        <div className='pb-24 bg-stone-100' id='projetos'/>
+        
         <div className='flex justify-center align-middle bg-stone-100'>
-                <span className='font-semibold text-[3vw] text-center underline underline-offset-1'>Projetos</span>
+                <span className='font-semibold lg:text-[3vw] text-[8vw] text-center lg:underline underline-offset-1'>Projetos</span>
         </div>
         
         <div className='pb-24 bg-stone-100'></div>
-        <div className='grid grid-cols-3 bg-stone-100'>
+        <div className='lg:grid lg:grid-cols-3 bg-stone-100 mb-24'>
             <Card 
             Title={"Simple-Curriculum"} 
             Description={ 
