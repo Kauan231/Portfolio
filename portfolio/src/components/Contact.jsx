@@ -11,30 +11,30 @@ export default function Contato() {
             </div>
             <div className="grid grid-cols-3 pb-12">
                 <div className="justify-center align-middle pt-12">
-                    <div>
+                    <a href="mailto:kauanramos03@outlook.com">
                         <MdOutlineEmail className="w-full h-[12vh]"/>
                         <div className='flex justify-center align-middle pt-2'>
                             <span className='font-semibold lg:text-[1.5vw] text-2xl text-center'>E-mail</span>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
                 <div className="justify-center align-middle pt-12">
-                    <div>
+                    <a href="https://wa.me/5513991492006">
                         <FaWhatsapp className="w-full h-[12vh]"/>
                         <div className='flex justify-center align-middle pt-2'>
                             <span className='font-semibold lg:text-[1.5vw] text-2xl text-center'>Whatsapp</span>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
                 <div className="justify-center align-middle pt-12">
-                    <div>
+                    <a href="https://www.linkedin.com/in/kauan-ramos/">
                         <FaLinkedin className="w-full h-[12vh]"/>
                         <div className='flex justify-center align-middle pt-2'>
                             <span className='font-semibold lg:text-[1.5vw] text-2xl text-center'>LinkedIn</span>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
             </div>

@@ -12,6 +12,10 @@ function App() {
 
   return (
     <>
+    <head>
+      <title>My Portfolio</title>
+    </head>
+    
     <Header/>
     <Hero/>
     <About/>
@@ -25,4 +29,3 @@ function App() {
 }
 
 export default App
-2
