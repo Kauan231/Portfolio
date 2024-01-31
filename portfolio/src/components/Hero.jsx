@@ -29,7 +29,7 @@ export default function Hero(){
                          />
                         </h1> 
                     </div>
-                    <button className='pt-4 ' onClick={
+                    <button className='pt-4 hover:translate-y-1 delay-75' onClick={
                         (e) => {
                             e.preventDefault();
                             const link = document.createElement('a');

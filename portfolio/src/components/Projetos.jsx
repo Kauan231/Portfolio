@@ -5,14 +5,14 @@ import thumbSnake from '../assets/home/projetos/Snake.png'
 
 function Card({Title, Description, Image, Link}) {
     return (
-        <div className='flex flex-col p-5 h-auto bg-gray-300 m-5 rounded-[5vh]'>
+        <div className='flex flex-col p-5 h-auto bg-gray-300 m-5 rounded-[5vh] shadow-gray-400 shadow-[10px_10px_4px_0px]'>
             <div style={{backgroundImage: "url('" + Image + "')"}} className='h-[50vh]  w-full bg-cover rounded-[2vh]'></div>
             <div className='p-10 w-full mb-auto'>
                 <span className='font-semibold text-2xl underline underline-offset-2'>{Title}</span>
                 <p className='mt-5 text-lg font-medium'>{Description}</p>
                 
             </div>
-            <a href={Link} className='bg-gray-900 mt-5 rounded-2xl text-center p-3 w-full'>
+            <a href={Link} className='bg-gray-900 mt-5 rounded-2xl text-center p-3 w-full hover:-rotate-2 duration-500'>
                 <span className='text-white font-extrathin text-2xl'>Ver no Github</span>
             </a>
         </div>

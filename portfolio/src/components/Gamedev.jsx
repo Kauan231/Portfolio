@@ -24,7 +24,14 @@ export default function Gamedev(){
                     Além da experiência profissional, já trabalhei com <b>C++</b> e a API nativa do Windows(Windows.h), criando o jogo Snake.
                     </aside>
                     <br></br>
-                    <span className="lg:text-xl text-justify font-semibold p-4"> Stack: Unity, C++(Windows.h), Blender, Photoshop, Illustrator</span>
+                    <div className="spacing gap-2 flex flex-wrap"> 
+                        <span className="lg:text-xl text-justify font-semibold p-1 ">Stack:</span>
+                        <span className="lg:text-xl text-justify font-semibold p-1 bg-slate-300 border rounded-lg hover:bg-opacity-50">Unity</span>
+                        <span className="lg:text-xl text-justify font-semibold p-1 bg-slate-300 border rounded-lg hover:bg-opacity-50">C++(Windows.h)</span>
+                        <span className="lg:text-xl text-justify font-semibold p-1 bg-slate-300 border rounded-lg hover:bg-opacity-50">Blender</span>
+                        <span className="lg:text-xl text-justify font-semibold p-1 bg-slate-300 border rounded-lg hover:bg-opacity-50">Photoshop</span>
+                        <span className="lg:text-xl text-justify font-semibold p-1 bg-slate-300 border rounded-lg hover:bg-opacity-50">Illustrator</span>
+                    </div>
                 </div>
                 
             </div>

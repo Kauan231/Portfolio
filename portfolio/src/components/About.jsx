@@ -9,7 +9,7 @@ export default function About() {
                 </div>
                 <div className="col-span-1 mt-8 md:mt-0">
                     <span className="md:text-[3vw] text-[6vw] underline-offset-4 underline font-semibold">Sobre</span>
-                    <p className="lg:text-[1.4vw] mt-4 md:font-thin ">
+                    <p className="font-thin lg:text-2xl mt-4">
                     Tenho mais de dois anos de experiência atuando no ramo de interatividade para eventos utilizando Unity e .Net porém também trabalhando com Backend e Frontend Web em NodeJS.
                 Além dessas tecnologias citadas, tenho experiência com: C++, C#, Javascript, Python, SQL(MariaDB, MySql), NoSQL(MongoDB), React, HTML, CSS, AWS e Nginx.
                 Trabalho bem com: Blender, Photoshop, Premiere, Illustrator e Figma.

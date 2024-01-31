@@ -18,7 +18,14 @@ Além disso, possuo experiência com proxy, notadamente no uso do Nginx.
 
                     </aside>
                     <br></br>
-                    <span className="lg:text-xl text-justify font-semibold p-4"> Stack: NodeJS, ASP.NET, DB, NGINX</span>
+                    <div className="spacing gap-2 flex flex-wrap"> 
+                        <span className="lg:text-xl text-justify font-semibold p-1 ">Stack:</span>
+                        <span className="lg:text-xl text-justify font-semibold p-1 bg-slate-300 border rounded-lg hover:bg-opacity-50">NodeJS</span>
+                        <span className="lg:text-xl text-justify font-semibold p-1 bg-slate-300 border rounded-lg hover:bg-opacity-50">ASP.NET</span>
+                        <span className="lg:text-xl text-justify font-semibold p-1 bg-slate-300 border rounded-lg hover:bg-opacity-50">MySql</span>
+                        <span className="lg:text-xl text-justify font-semibold p-1 bg-slate-300 border rounded-lg hover:bg-opacity-50">MongoDB</span>
+                        <span className="lg:text-xl text-justify font-semibold p-1 bg-slate-300 border rounded-lg hover:bg-opacity-50">Nginx</span>
+                    </div>
                 </div>
                 
                 
