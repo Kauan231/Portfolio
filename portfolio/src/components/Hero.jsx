@@ -1,5 +1,5 @@
 import './style/Hero.css'
-import Curriculo from '../assets/home/documentos/Curriculo_KauanRamos.pdf'
+import Curriculo from '../assets/home/documentos/Curriculo.pdf'
 import { TypeAnimation } from 'react-type-animation';
 import ProgrammingPhoto from '../assets/home/Programming.jpeg'
 
