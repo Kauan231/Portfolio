@@ -3,6 +3,7 @@ import Curriculo from '../assets/home/documentos/Curriculo_KauanRamos.pdf'
 import { TypeAnimation } from 'react-type-animation';
 import ProgrammingPhoto from '../assets/home/Programming.jpeg'
 
+
 export default function Hero(){ 
     return (
         <>
@@ -28,7 +29,7 @@ export default function Hero(){
                          />
                         </h1> 
                     </div>
-                    <button className='pt-4' onClick={
+                    <button className='pt-4 ' onClick={
                         (e) => {
                             e.preventDefault();
                             const link = document.createElement('a');

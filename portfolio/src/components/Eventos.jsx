@@ -3,19 +3,20 @@ import { FaArrowAltCircleRight } from "react-icons/fa";
 import { useState } from "react";
 
 import '../components/style/Eventos.css'
-import Adidas from '../assets/home/eventos/Adidas.jpg'
-import Ype from '../assets/home/eventos/Ypê.jpg'
-import Ype2 from '../assets/home/eventos/Ype2.jpg'
-import Heineken from '../assets/home/eventos/Heineken.jpg'
-import Sebrae from '../assets/home/eventos/Sebrae.jpg'
-import Sebrae2 from '../assets/home/eventos/Sebrae2.jpg'
-import Sebrae3 from '../assets/home/eventos/Sebrae3.jpg'
-import Sebrae4 from '../assets/home/eventos/Sebrae4.jpg'
-import Medilar from '../assets/home/eventos/Medilar.jpg'
-import Descartavel from '../assets/home/eventos/Descartavel.jpg'
 
 let iterator = 0;
-let ImageList = [Adidas, Ype, Ype2, Heineken, Sebrae, Sebrae2, Sebrae3, Sebrae4, Medilar, Descartavel];
+let ImageList = [
+    'http://localhost:5173/src/assets/home/eventos/Adidas.jpg',
+    'http://localhost:5173/src/assets/home/eventos/Yp%C3%AA.jpg',
+    'http://localhost:5173/src/assets/home/eventos/Ype2.jpg',
+    'http://localhost:5173/src/assets/home/eventos/Heineken.jpg',
+    'http://localhost:5173/src/assets/home/eventos/Sebrae.jpg',
+    'http://localhost:5173/src/assets/home/eventos/Sebrae2.jpg',
+    'http://localhost:5173/src/assets/home/eventos/Sebrae3.jpg',
+    'http://localhost:5173/src/assets/home/eventos/Sebrae4.jpg',
+    'http://localhost:5173/src/assets/home/eventos/Medilar.jpg',
+    'http://localhost:5173/src/assets/home/eventos/Descartavel.jpg'
+];
 
 function Gallery() {
     const [Image, setImage] = useState(ImageList[0])
@@ -38,7 +39,7 @@ function Gallery() {
 
     return (
         <>
-        <div style={{backgroundImage: "url('" + Image + "')"}} className='h-[80vh] w-full bg-cover bg-center' id="gallery">
+        <div style={{backgroundImage: "url(" + Image + ")"}} className='h-[80vh] w-full bg-cover bg-center' id="gallery">
             <div className='grid grid-cols-2 h-full w-full'>
                     <div className="flex place-items-center justify-start">
                         <a onClick={ChangeImageLeft} >
@@ -89,26 +90,3 @@ export default function Eventos() {
         </>
     )
 }
-
-//<img className='h-[50vh] mt-12 mb-12' src={Ype}></img>
-
-/*
-<div className='w-full pb-24'></div>
-
-<div style={{backgroundImage: "url('" + Image + "')"}} className='h-[80vh]  w-full bg-cover' id="gallery">
-                    <div className='grid grid-cols-2 h-full w-full'>
-                        <button className='flex place-items-center' onClick={ChangeImageLeft}>
-                        <FaArrowAltCircleLeft className='h-[20vh] w-auto fill-white ml-5'/>
-                        </button>
-
-                        <button className='flex place-items-center place-content-end' onClick={ChangeImageRight}>
-                        <FaArrowAltCircleRight className='h-[20vh] w-auto fill-white mr-5'/>
-                        </button>
-                    </div>
-                    
-                </div>
-
-                <a className='bg-gray-900 mt-5 rounded-2xl text-center p-3 mb-12'>
-                    <span className='text-white font-extrathin text-2xl'>Ver mais sobre...</span>
-                </a>
-*/
