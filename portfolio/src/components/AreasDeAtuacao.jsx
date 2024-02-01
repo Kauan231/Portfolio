@@ -12,8 +12,8 @@ export default function AreasDeAtuacao(){
                 <span className='font-semibold lg:text-[3vw] text-[8vw] text-center underline underline-offset-1'>Áreas de Atuação</span>
             </div>
             <Frontend/>
-            <Backend></Backend>
-            <Gamedev></Gamedev>
+            <Backend/>
+            <Gamedev/>
             <div className='pb-24 bg-stone-100' id='projetos'/>
         </div>
         </>

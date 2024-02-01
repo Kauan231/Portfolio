@@ -15,9 +15,8 @@ export default function Hero(){
                         <h1 className="md:text-[2vw] font-medium text-gray text-left"> 
                         <TypeAnimation
                         sequence={[
-                            // Same substring at the start will only be typed out once, initially
                             'Desenvolvedor Frontend',
-                            1000, // wait 1s before replacing "Mice" with "Hamsters"
+                            1000,
                             'Desenvolvedor Backend',
                             1000,
                             'Desenvolvedor De Jogos',
@@ -48,26 +47,3 @@ export default function Hero(){
         </>
     )
 }
-
-/*
-BACKUP
-<div className="h-auto w-full bg-neutral-200 grid grid-flow-row grid-cols-5" > 
-                <div className='pt-24 pl-24 col-span-1'>
-                    <h1 className="items-center text-[5vw] font-medium text-gray"> Olá,</h1> 
-                    <span className="items-center text-2xl font-medium  text-gray pt-5"> Um Desenvolvedor focado em ...</span> 
-                    <span className="flex items-center text-2xl font-medium  text-gray pt-5"> Confira meus projetos em</span>
-                    <button onClick={
-                        (e) => {
-                            e.preventDefault();
-                            window.location.href='https://github.com/Kauan231';
-                        }
-                    }>
-                        <img src={GithubLogo} className='scale-50'/>
-                    </button>
-                    
-                </div>
-                <div className='col-span-3'>
-                    <img src={Ype} className=' justify-center items-center'></img>
-                </div>
-            </div>
-*/

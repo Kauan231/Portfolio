@@ -90,25 +90,3 @@ export default function Eventos() {
     )
 }
 
-//<img className='h-[50vh] mt-12 mb-12' src={Ype}></img>
-
-/*
-<div className='w-full pb-24'></div>
-
-<div style={{backgroundImage: "url('" + Image + "')"}} className='h-[80vh]  w-full bg-cover' id="gallery">
-                    <div className='grid grid-cols-2 h-full w-full'>
-                        <button className='flex place-items-center' onClick={ChangeImageLeft}>
-                        <FaArrowAltCircleLeft className='h-[20vh] w-auto fill-white ml-5'/>
-                        </button>
-
-                        <button className='flex place-items-center place-content-end' onClick={ChangeImageRight}>
-                        <FaArrowAltCircleRight className='h-[20vh] w-auto fill-white mr-5'/>
-                        </button>
-                    </div>
-                    
-                </div>
-
-                <a className='bg-gray-900 mt-5 rounded-2xl text-center p-3 mb-12'>
-                    <span className='text-white font-extrathin text-2xl'>Ver mais sobre...</span>
-                </a>
-*/
