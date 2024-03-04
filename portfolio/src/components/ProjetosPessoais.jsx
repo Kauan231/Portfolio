@@ -1,18 +1,22 @@
 import {personalProjects} from "../assets/home/projetos/projetos";
+import {personalProjectsEN} from "../assets/home/projetos/projects";
+
 import { useState } from "react";
 import { VideoContext } from '../context/videoContext';
 import { useContext } from 'react';
+import { LanguageContext } from "../context/languageContext";
 
 const PersonalProjects = () => {
     const { SetCurrentVideo } = useContext(VideoContext);
     const { SetOpen } = useContext(VideoContext);
     const [CardLimit, SetCardLimit] = useState(3);
+    const { Language } = useContext(LanguageContext);
 
     function Card({Title, Description, Image, Link, Hidden, Video}) {
         return (
-            <div className={`p-5 h-auto bg-gray-300 m-5 rounded-[5vh] shadow-gray-400 shadow-[10px_10px_4px_0px] ${Hidden ?  "hidden" : "flex flex-col"}`}>
-                <div style={{backgroundImage: "url('" + Image + "')"}} className='h-[50vh]  w-full bg-cover rounded-[2vh]'></div>
-                <div className='p-10 w-full mb-auto'>
+            <div className={`p-5 h-auto bg-gray-300 m-5 mb-10 rounded-[5vh] shadow-gray-400 shadow-[10px_10px_4px_0px] ${Hidden ?  "hidden" : "flex flex-col"}`}>
+                <div style={{backgroundImage: "url('" + Image + "')"}} className='sm:h-[50vh] h-[20vh]  w-full sm:bg-cover bg-contain bg-no-repeat bg-center  rounded-[2vh]'></div>
+                <div className='sm:p-10 p-2 w-full mb-auto'>
                     <span className='font-semibold text-2xl underline underline-offset-2'>{Title}</span>
                     <p className='mt-5 text-lg font-medium'>{Description}</p>
                     
@@ -20,15 +24,15 @@ const PersonalProjects = () => {
                 
                 {
                     Video ? <div className="grid grid-cols-2 gap-5">
-                                <a href={Link} className='bg-gray-900 mt-5 rounded-2xl text-center p-3 w-full hover:-rotate-2 duration-500'>
-                                    <span className='text-white font-extrathin text-2xl'>Ver no Github</span>
+                                <a href={Link} className='bg-gray-900 mt-5 rounded-2xl text-center sm:p-3 p-2 w-full hover:-rotate-2 duration-500'>
+                                    <span className='text-white font-extrathin text-2xl'>Github</span>
                                 </a>
-                                <button onClick={ () => { SetCurrentVideo(Video); SetOpen(true); } } className='bg-gray-900 mt-5 rounded-2xl text-center p-3 w-full hover:-rotate-2 duration-500'>
-                                    <span className='text-white font-extrathin text-2xl'>Assistir</span>
+                                <button onClick={ () => { SetCurrentVideo(Video); SetOpen(true); } } className='bg-gray-900 mt-5 rounded-2xl text-center  sm:p-3 p-2 w-full hover:-rotate-2 duration-500'>
+                                    <span className='text-white font-extrathin text-2xl'>{(Language == "Portuguese") ? "Assistir" : "Watch"}</span>
                                 </button>
                             </div> : 
-                            <a href={Link} className='bg-gray-900 mt-5 rounded-2xl text-center p-3 w-full hover:-rotate-2 duration-500'>
-                                <span className='text-white font-extrathin text-2xl'>Ver no Github</span>
+                            <a href={Link} className='bg-gray-900 mt-5 rounded-2xl text-center  sm:p-3 p-2 w-full hover:-rotate-2 duration-500'>
+                                <span className='text-white font-extrathin text-2xl'>Github</span>
                             </a>
                     
                 }
@@ -54,7 +58,7 @@ const PersonalProjects = () => {
                         SetCardLimit(CardLimit+3);
                     }} 
                     className='bg-gray-900 rounded-2xl text-center p-3 w-1/2 h-1/2 hover:-rotate-2 duration-500'>
-                        <span className='text-white font-extrathin text-2xl'>Mostrar mais</span>
+                        <span className='text-white font-extrathin text-2xl'>{(Language == "Portuguese") ? "Mostrar mais" : "Show More"}</span>
                     </button>
                 </div>
                 </>
@@ -68,7 +72,11 @@ const PersonalProjects = () => {
         )
     }
 
-    return <ShowCards ArrayOfProjects={personalProjects} />
+    if( Language == "Portuguese") {
+        return <ShowCards ArrayOfProjects={personalProjects} />
+    }
+    return <ShowCards ArrayOfProjects={personalProjectsEN} />
+    
 }
 
 export default PersonalProjects;

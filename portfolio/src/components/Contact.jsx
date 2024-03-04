@@ -2,12 +2,17 @@ import { MdOutlineEmail } from "react-icons/md";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 
+import { useContext } from 'react';
+import { LanguageContext } from "../context/languageContext";
+
 export default function Contato() {
+    const { Language } = useContext(LanguageContext);
+    
     return (
         <>
         <div className="bg-stone-200 pb-auto" id="contato">
-            <div className='flex justify-center align-middle pt-12'>
-                <span className='font-semibold lg:text-[3vw] text-[6vw] text-center underline underline-offset-8'>Contato</span>
+            <div className='flex justify-center align-middle sm:pt-12 pt-5'>
+                <span className='font-semibold lg:text-[3vw] text-[6vw] text-center underline underline-offset-8'>{(Language == "Portuguese") ? "Contatos" : "Contacts"}</span>
             </div>
             <div className="grid grid-cols-3 pb-12">
                 <div className="justify-center align-middle pt-12">

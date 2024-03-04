@@ -9,7 +9,7 @@ import thumbDragon from '../projetos/Dragon.jpg'
 import thumbYpe from '../projetos/Ype.jpg'
 import thumbTetris from '../projetos/Tetris.jpg'
 
-export const personalProjects = [
+export const personalProjectsEN = [
     {
         "Title": "Simple-Curriculum",
         "Description": 
@@ -54,7 +54,7 @@ export const personalProjects = [
     },
 ]
 
-export const workProjects = [
+export const workProjectsEN = [
     {
         "Title": "Roche Lab Builder",
         "Image": thumbRoche,

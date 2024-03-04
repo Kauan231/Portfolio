@@ -1,21 +1,25 @@
 import {workProjects } from "../assets/home/projetos/projetos";
+import {workProjectsEN} from "../assets/home/projetos/projects";
+
 import { useState } from "react";
 import { VideoContext } from '../context/videoContext';
 import { useContext } from 'react';
+import { LanguageContext } from "../context/languageContext";
 
 const ProfessionalProjects = () => {
     const { SetCurrentVideo, SetOpen } = useContext(VideoContext);
     const [CardLimit, SetCardLimit] = useState(3);
+    const { Language } = useContext(LanguageContext);
     
     function CardVideo({Title, Image, Link, Hidden}) {
         return (
-            <div className={`p-5 h-auto  bg-white m-5 rounded-[5vh] shadow-gray-600 shadow-[10px_10px_4px_0px] ${Hidden ?  "hidden" : "flex flex-col"} `}>
-                <div style={{backgroundImage: "url('" + Image + "')"}} className='h-[50vh]  w-full bg-cover rounded-[2vh] border-4 border-blck'></div>
+            <div className={`p-5 h-auto  bg-white sm:m-5  m-5 mb-10 rounded-[5vh] shadow-gray-600 shadow-[10px_10px_4px_0px] ${Hidden ?  "hidden" : "flex flex-col"} `}>
+                <div style={{backgroundImage: "url('" + Image + "')"}} className='sm:h-[50vh] h-[20vh] w-full sm:bg-cover bg-contain bg-no-repeat bg-center rounded-[2vh]'></div>
                 <div className='p-10 w-full mb-auto grid justify-center'>
                     <span className='font-bold text-3xl text-black'>{Title}</span>
                 </div>
                 <button onClick={ () => { SetCurrentVideo(Link); SetOpen(true); } } className='bg-gray-300 mt-5 rounded-2xl text-center p-3 w-full hover:-rotate-2 duration-500'>
-                    <span className='text-black font-extrathin text-2xl'>Visualizar</span>
+                    <span className='text-black font-extrathin text-2xl'>{(Language == "Portuguese") ? "Visualizar" : "Watch"}</span>
                 </button>
             </div>
         )
@@ -37,7 +41,7 @@ const ProfessionalProjects = () => {
                         SetCardLimit(CardLimit+3);
                     }} 
                     className='bg-gray-900 rounded-2xl text-center p-3 w-1/2 h-1/2 hover:-rotate-2 duration-500'>
-                        <span className='text-white font-extrathin text-2xl'>Mostrar mais</span>
+                        <span className='text-white font-extrathin text-2xl'>{(Language == "Portuguese") ? "Mostrar mais" : "Show More"}</span>
                     </button>
                 </div>
                 </>
@@ -51,11 +55,8 @@ const ProfessionalProjects = () => {
         )
     }
 
-    return (
-        <>
-        <ShowCards ArrayOfProjects={workProjects} />
-        </>
-    )
+    if(Language == "Portuguese") return <ShowCards ArrayOfProjects={workProjects} /> ;
+    return <ShowCards ArrayOfProjects={workProjectsEN} /> ;
 }
 
 export default ProfessionalProjects;
