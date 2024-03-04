@@ -3,7 +3,13 @@ import thumbStore from '../projetos/Store.jpg'
 import thumbBurguer from '../projetos/BurgerIcon.png'
 import thumbSnake from '../projetos/Snake.png'
 
-const PersonalProjects = [
+import thumbNave from '../projetos/Nave.jpg'
+import thumbRoche from '../projetos/Roche.jpg'
+import thumbDragon from '../projetos/Dragon.jpg'
+import thumbYpe from '../projetos/Ype.jpg'
+import thumbTetris from '../projetos/Tetris.jpg'
+
+export const personalProjects = [
     {
         "Title": "Simple-Curriculum",
         "Description": 
@@ -20,7 +26,8 @@ const PersonalProjects = [
         This project was developed using C++, Mysql connector, and Boost Libraries. The Store Management system operates with a structured division of responsibilities between the Manager and the Seller, each equipped with specific options tailored to their roles.
         </>,
         "Image": thumbStore,
-        "Link": "https://github.com/Kauan231/Store-Management"
+        "Link": "https://github.com/Kauan231/Store-Management",
+        "Video": "https://youtu.be/Z-ZmqmdiBaM"
     },
     {
         "Title": "Burguer-Game",
@@ -42,9 +49,35 @@ const PersonalProjects = [
         Snake game developed with Windows native API (Win32 - Windows.h).
         </>,
         "Image": thumbSnake,
-        "Link": "https://github.com/Kauan231/Snake-game"
+        "Link": "https://github.com/Kauan231/Snake-game",
+        "Video" : "https://youtu.be/DRRxDrfRI1c"
     },
 ]
 
-
-export default PersonalProjects;
+export const workProjects = [
+    {
+        "Title": "Roche Lab Builder",
+        "Image": thumbRoche,
+        "Link": "https://youtu.be/x5Gbx0zI4VY"
+    },
+    {
+        "Title": "Kinea Racer",
+        "Image": thumbNave,
+        "Link": "https://youtu.be/L-m8cqTo44o"
+    },
+    {
+        "Title": "Dragon Kinect",
+        "Image": thumbDragon,
+        "Link": "https://youtu.be/iLbuda_haoM"
+    },
+    {
+        "Title": "Ypê - Memory Game",
+        "Image": thumbYpe,
+        "Link": "https://youtube.com/shorts/8iIfaG7YSuE"
+    },
+    {
+        "Title": "Tetris",
+        "Image": thumbTetris,
+        "Link": "https://youtube.com/shorts/f_X0RoumFmg"
+    },
+]

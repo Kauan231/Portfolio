@@ -6,18 +6,21 @@ import Projetos from './components_english/Projetos'
 import Eventos from './components_english/Eventos'
 import Contato from './components_english/Contact'
 import Footer from './components_english/Footer'
+import { VideoProvider } from './context/videoContext.jsx'
 
 const English = () => {
     return (
         <>
-        <Header/>
-        <Hero/>
-        <About/>
-        <AreasDeAtuacao/>
-        <Projetos/>
-        <Eventos/>
-        <Contato/>
-        <Footer/>
+        <VideoProvider>
+          <Header/>
+          <Hero/>
+          <About/>
+          <AreasDeAtuacao/>
+          <Projetos/>
+          <Eventos/>
+          <Contato/>
+          <Footer/>
+        </VideoProvider>
         </>
       )
 }
