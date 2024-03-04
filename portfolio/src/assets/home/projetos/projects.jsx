@@ -3,7 +3,7 @@ import thumbStore from '../projetos/Store.jpg'
 import thumbBurguer from '../projetos/BurgerIcon.png'
 import thumbSnake from '../projetos/Snake.png'
 
-import thumbNave from '../projetos/Nave.jpg'
+import thumbNave from '../projetos/NAVE.jpg'
 import thumbRoche from '../projetos/Roche.jpg'
 import thumbDragon from '../projetos/Dragon.jpg'
 import thumbYpe from '../projetos/Ype.jpg'
