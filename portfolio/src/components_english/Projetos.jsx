@@ -5,7 +5,7 @@ import thumbBurguer from '../assets/home/projetos/BurgerIcon.png'
 import thumbSnake from '../assets/home/projetos/Snake.png'
 */
 
-import PersonalProjects from "../assets/home/projetos/projetos";
+import PersonalProjects from "../assets/home/projetos/projects";
 import { useState } from "react";
 
 function Card({Title, Description, Image, Link, Hidden}) {
@@ -18,7 +18,7 @@ function Card({Title, Description, Image, Link, Hidden}) {
                 
             </div>
             <a href={Link} className='bg-gray-900 mt-5 rounded-2xl text-center p-3 w-full hover:-rotate-2 duration-500'>
-                <span className='text-white font-extrathin text-2xl'>Ver no Github</span>
+                <span className='text-white font-extrathin text-2xl'>Access on Github</span>
             </a>
         </div>
     )
@@ -42,7 +42,7 @@ function ShowCards({ArrayOfProjects}) {
                     SetCardLimit(CardLimit+3);
                 }} 
                 className='bg-gray-900 rounded-2xl text-center p-3 w-1/2 h-1/2 hover:-rotate-2 duration-500'>
-                    <span className='text-white font-extrathin text-2xl'>Mostrar mais</span>
+                    <span className='text-white font-extrathin text-2xl'>Show More</span>
                 </button>
             </div>
             </>
@@ -61,7 +61,7 @@ export default function Projetos() {
         <>
         
         <div className='flex justify-center align-middle bg-stone-100'>
-                <span className='font-semibold lg:text-[3vw] text-[8vw] text-center lg:underline underline-offset-1'>Projetos Pessoais</span>
+                <span className='font-semibold lg:text-[3vw] text-[8vw] text-center lg:underline underline-offset-1'>Personal Projects</span>
         </div>
         
         <div className='pb-12 bg-stone-100'>

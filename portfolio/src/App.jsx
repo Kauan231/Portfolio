@@ -1,31 +1,25 @@
 import './App.css'
-import Header from './components/Header'
-import Hero from './components/Hero'
-import AreasDeAtuacao from './components/AreasDeAtuacao'
-import About from './components/About'
-import Projetos from './components/Projetos'
-import Eventos from './components/Eventos'
-import Contato from './components/Contact'
-import Footer from './components/Footer'
+import { useContext } from 'react';
+import { LanguageContext } from './context/languageContext'
+import Portuguese from './Portuguese';
+import English from './English';
 
 function App() {
+  const { Language } = useContext(LanguageContext);
 
-  return (
-    <>
-    <head>
-      <title>My Portfolio</title>
-    </head>
-    
-    <Header/>
-    <Hero/>
-    <About/>
-    <AreasDeAtuacao/>
-    <Projetos/>
-    <Eventos/>
-    <Contato/>
-    <Footer/>
-    </>
-  )
+  if(Language == "Portuguese") {
+    return (
+      <Portuguese/>
+    )
+  }
+  if(Language == "English") {
+    return (
+      <English/>
+    )
+  }
+  
+  
+  
 }
 
 export default App

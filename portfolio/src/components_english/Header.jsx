@@ -1,7 +1,8 @@
 import '../components/style/Header.css'
 import { LanguageContext } from '../context/languageContext'
 import { useContext } from 'react'
-import { GB } from 'country-flag-icons/react/3x2'
+
+import { PT } from 'country-flag-icons/react/3x2'
 
 export default function Header(){
     const {Language, SetLanguage} = useContext(LanguageContext);
@@ -21,20 +22,20 @@ export default function Header(){
             <div className='flex w-full h-full items-center justify-center'>
                 <ul className="flex h-full lg:w-auto  lg:space-x-36 lg:visible visible">
                     <li>
-                        <a href="#sobre" className="flex h-full items-center lg:text-lg font-medium p-2 text-white hover:scale-110 transform transition duration-y">Sobre</a>
+                        <a href="#sobre" className="flex h-full items-center lg:text-lg font-medium p-2 text-white hover:scale-110 transform transition duration-y">About</a>
                     </li>
                     <li>
-                        <a href="#projetos" className="flex h-full items-center lg:text-lg font-medium p-2 text-white hover:scale-110 transform transition duration-y">Projetos</a>
+                        <a href="#projetos" className="flex h-full items-center lg:text-lg font-medium p-2 text-white hover:scale-110 transform transition duration-y">Projects</a>
                     </li>
                     <li>
-                        <a href="#eventos" className="flex h-full items-center lg:text-lg font-medium p-2 text-white hover:scale-110 transform transition duration-y">Eventos</a>
+                        <a href="#eventos" className="flex h-full items-center lg:text-lg font-medium p-2 text-white hover:scale-110 transform transition duration-y">Events</a>
                     </li>
                     <li>
-                        <a href="#contato" className="flex h-full items-center lg:text-lg font-medium p-2 text-white hover:scale-110 transform transition duration-y">Contato</a>
+                        <a href="#contato" className="flex h-full items-center lg:text-lg font-medium p-2 text-white hover:scale-110 transform transition duration-y">Contact</a>
                     </li>
 
                     <li>
-                        <GB onClick={SwitchLanguage} className="flex h-full items-center lg:text-lg font-medium p-2 text-white hover:scale-110 transform transition duration-y">Switch Language</GB>
+                        <PT onClick={SwitchLanguage} className="flex h-full items-center lg:text-lg font-medium p-2 text-white hover:scale-110 transform transition duration-y">Switch Language</PT>
                     </li>
                 </ul>
             </div>
