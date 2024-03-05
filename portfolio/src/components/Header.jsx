@@ -1,7 +1,7 @@
 import '../components/style/Header.css'
 import { LanguageContext } from '../context/languageContext'
 import { useContext, useState } from 'react'
-import { GB } from 'country-flag-icons/react/3x2'
+import { GB, PT } from 'country-flag-icons/react/3x2'
 import { VscThreeBars } from "react-icons/vsc";
 
 export default function Header(){
@@ -37,7 +37,10 @@ export default function Header(){
                     </li>
 
                     <li>
-                        <GB onClick={SwitchLanguage} className="flex h-full items-center lg:text-lg font-medium p-2 text-white hover:scale-110 transform transition duration-y">Switch Language</GB>
+                    {(Language == "Portuguese") ? 
+                        <GB onClick={SwitchLanguage} className="flex h-full items-center lg:text-lg font-medium p-2 text-white hover:scale-110 transform transition duration-y">Switch Language</GB> :
+                        <PT onClick={SwitchLanguage} className="flex h-full items-center lg:text-lg font-medium p-2 text-white hover:scale-110 transform transition duration-y">Mudar Linguagem</PT>
+                    }   
                     </li>
                 </ul>
             </div>
@@ -49,7 +52,11 @@ export default function Header(){
                 <a href="#projetos" className="text-center font-medium p-2 text-white text-sm">{(Language == "Portuguese") ? "Projetos" : "Projects"}</a>
                 <a href="#eventos" className="text-center font-medium p-2 text-white text-sm">{(Language == "Portuguese") ? "Eventos" : "Events"}</a>
                 <a href="#contato" className="text-center font-medium p-2 text-white text-sm">{(Language == "Portuguese") ? "Contato" : "Contacts"}</a>
-                <GB onClick={SwitchLanguage} className="h-auto w-16 items-center font-medium p-2 text-white">Switch Language</GB>
+                {(Language == "Portuguese") ? 
+                <GB onClick={SwitchLanguage} className="h-auto w-16 items-center font-medium p-2 text-white">Switch Language</GB> :
+                <PT onClick={SwitchLanguage} className="h-auto w-16 items-center font-medium p-2 text-white">Mudar Linguagem</PT>
+                }
+                
             </div>
         </div>
     </header>
