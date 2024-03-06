@@ -11,7 +11,7 @@
 }
 
 .Video-Close-Icon { 
-    @apply fixed w-auto h-12  text-white md:hidden block mb-6 bottom-[85vh];
+    @apply fixed w-auto h-12  text-white md:hidden block mb-6 top-[5vh] bottom-[85vh];
 }
 
 .Description-Container {
