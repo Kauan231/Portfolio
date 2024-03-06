@@ -7,7 +7,7 @@ import thumbNave from '../projetos/NAVE.jpg'
 import thumbRoche from '../projetos/Roche.jpg'
 import thumbDragon from '../projetos/Dragon.jpg'
 import thumbYpe from '../projetos/Ype.jpg'
-import thumbTetris from '../projetos/Tetris.jpg'
+import thumbTetris from '../projetos/Tetris.jfif'
 
 export const personalProjectsEN = [
     {

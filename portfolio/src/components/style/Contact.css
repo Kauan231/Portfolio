@@ -1,0 +1,23 @@
+.SocialMedia-Icon {
+    @apply w-full sm:h-[8vh] h-[5vh] hover:scale-90 transform transition duration-100;
+}
+
+.Align-Title {
+    @apply flex justify-center align-middle pt-2;
+}
+
+.Contacts-Title {
+    @apply flex justify-center align-middle sm:pt-12 pt-2;
+}
+
+.SocialMedia-Title {
+    @apply font-semibold lg:text-xl text-xl text-center;
+}
+
+.SocialMedia-Container {
+    @apply justify-center align-middle sm:pt-12 pt-2 p-6;
+}
+
+.Align-Icons {
+    @apply sm:grid sm:grid-cols-3 pb-12 flex flex-wrap flex-1 justify-center align-middle ;
+}

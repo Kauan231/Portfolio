@@ -1,3 +1,35 @@
 #heroImg {
-    clip-path: polygon(20% 0, 13% 100%, 100% 100%, 100% 0%);
+    clip-path: polygon(20% 0, 0% 100%, 100% 100%, 100% 0%);
+}
+
+.Hero {
+    @apply h-auto w-auto md:grid md:grid-flow-row md:grid-cols-5 bg-stone-200 items-center flex flex-col;
+}
+
+.Image-Container {
+    @apply md:col-span-3 md:pb-[5vh] align-top order-first md:order-last;
+}
+
+.Hero-H1 {
+    @apply md:text-[5vw] text-[8vw] font-medium pt-12 md:pt-0;
+}
+
+.Hero-H2 {
+    @apply md:text-[2vw] text-[3vw] font-medium opacity-30 text-left;
+}
+
+.Animation-Text {
+    @apply md:text-[2vw] font-medium text-left;
+}
+
+.Animation-Container {
+    @apply md:pl-24 md:col-span-2 order-last mb-12;
+}
+
+
+.Download-Button {
+    @apply pt-4 hover:translate-y-1 delay-75;
+}
+.Download-Button-Text {
+    @apply bg-black text-white rounded-md p-2;
 }

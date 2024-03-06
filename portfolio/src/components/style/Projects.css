@@ -1,0 +1,55 @@
+.ProfessionalProjects {
+    @apply w-full h-full bg-gradient-to-b from-stone-100 to-sky-200 pb-12 sm:pt-24 ;
+}
+
+.Card {
+    @apply p-5 h-auto bg-gray-300 sm:m-5 mb-10 rounded-[5vh] shadow-gray-400 shadow-[10px_10px_4px_0px];
+}
+
+.Card-Image {
+    @apply sm:h-[50vh] h-[20vh]  w-full sm:bg-cover bg-contain bg-no-repeat bg-center rounded-[2vh];
+}
+
+.Card-Article {
+    @apply sm:p-10 p-2 w-full mb-auto;
+}
+
+.Card-Title {
+    @apply font-semibold text-2xl underline underline-offset-2;
+}
+
+.Card-Paragraph {
+    @apply mt-5 text-lg font-medium;
+}
+
+.Card-Button-Text {
+    @apply text-white font-thin text-2xl;
+}
+
+.Card-Button {
+    @apply bg-gray-900 mt-5 rounded-2xl text-center  sm:p-3 p-2 w-full hover:-rotate-2 duration-500;
+}
+
+.Card-Grid {
+    @apply lg:grid lg:grid-cols-3 min-[1920px]:pl-40 min-[1920px]:pr-40 pl-10 pr-10;
+}
+
+.ShowMore-Center {
+    @apply flex justify-center align-middle w-full mt-12;
+}
+
+.ShowMore-Button {
+    @apply bg-gray-900 rounded-2xl text-center p-3 w-1/2 h-1/2 hover:-rotate-2 duration-500;
+}
+
+.SpecialCard {
+    @apply p-5 h-auto bg-white m-5 mb-10 rounded-[5vh] shadow-gray-600 shadow-[10px_10px_4px_0px] ;
+}
+
+.SpecialCard-Title {
+    @apply text-black font-thin text-2xl;
+}
+
+.PersonalProjects {
+    @apply w-full h-full bg-gradient-to-b from-white/0 to-stone-100;
+}

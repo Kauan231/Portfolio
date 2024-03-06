@@ -1,3 +1,26 @@
 #evento {
     clip-path: polygon(100% 22%, 100% 100%, 0 100%, 0 0);
 }
+
+.Event-Paragraph {
+    @apply font-thin lg:text-2xl lg:p-24 p-10  text-white;
+}
+
+.Gallery-Container {
+    @apply sm:h-[60vh] h-[20vh] w-full bg-cover bg-center;
+}
+
+.Gallery-Grid {
+    @apply grid grid-cols-2 h-full w-full ;
+}
+
+.LeftArrow {
+    @apply flex place-items-center justify-start ml-5;
+}
+.RightArrow {
+    @apply flex place-items-center justify-end mr-5;
+}
+
+.Gallery-Arrow {
+    @apply lg:h-[8vh] h-[15vw] w-auto fill-white;
+}

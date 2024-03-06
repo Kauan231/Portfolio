@@ -1,0 +1,24 @@
+.Skills-Article {
+    @apply h-auto w-full justify-center items-center lg:grid lg:grid-cols-4 sm:mt-12 mt-5 ;
+}
+
+.Skills-Aside {
+    @apply lg:text-xl text-justify lg:pr-24 lg:border-black border-l-4 lg:pl-2 sm:p-4 p-2 sm:col-span-3 lg:ml-5;
+}
+
+.Skill-Title {
+    @apply lg:text-4xl text-xl col-span-1 p-10 underline underline-offset-4 lg:no-underline lg:text-right;
+}
+
+.Stack-Title {
+    @apply lg:text-xl text-justify font-semibold p-1 ;
+}
+
+.Stack-Item {
+    @apply lg:text-xl text-justify font-semibold p-1 bg-slate-300 border rounded-lg hover:bg-opacity-50 duration-500;
+}
+.Stack-Items {
+    @apply gap-2 flex flex-wrap justify-center sm:justify-normal mt-6;
+}
+
+

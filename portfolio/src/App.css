@@ -3,3 +3,16 @@
 @import "tailwindcss/components";
 
 @import "tailwindcss/utilities";
+
+.Title-Center {
+    @apply font-semibold lg:text-[2vw] sm:text-4xl text-2xl text-center no-underline underline-offset-4 p-12;
+}
+
+.Div-Center {
+    @apply flex justify-center align-middle sm:pb-12 pb-5;
+}
+
+.Arrow {
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+    @apply bg-stone-300 sm:h-[20vh] h-[10vh] w-auto ;
+}

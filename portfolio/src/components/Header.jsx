@@ -15,50 +15,67 @@ export default function Header(){
             SetLanguage("Portuguese");
         }
     }
+
     return (
-    <header className="h-full sm:h-12 w-full bg-gray-700">
-        <div className="lg:flex items-center h-full sm:block hidden">
-            <div className='lg:flex items-center justify-start hidden'>
-                <a href="/" className=' flex h-full items-center justify-start text-2lg font-medium p-12 text-white lg:visible visible hover:scale-110 transform transition duration-y'>Kauan Ramos</a>
+    <header className="Header">
+        <nav className="Navbar">
+            <div className='Logo'>
+                <a href="/" className='Logo-Item'>Kauan Ramos</a>
             </div>
-            <div className='flex w-full h-full items-center justify-center'>
-                <ul className="flex h-full lg:w-auto  lg:space-x-36 lg:visible visible">
+            <div className='Center-Contents'>
+                <ul className="Navbar-Links ">
                     <li>
-                        <a href="#sobre" className="flex h-full items-center lg:text-lg font-medium p-2 text-white hover:scale-110 transform transition duration-y">{(Language == "Portuguese") ? "Sobre" : "About"}</a>
+                        <a href="#About" className="Navbar-Link">{(Language == "Portuguese") ? "Sobre" : "About"}</a>
                     </li>
                     <li>
-                        <a href="#projetos" className="flex h-full items-center lg:text-lg font-medium p-2 text-white hover:scale-110 transform transition duration-y">{(Language == "Portuguese") ? "Projetos" : "Projects"}</a>
+                        <a href="#Projects" className="Navbar-Link">{(Language == "Portuguese") ? "Projetos" : "Projects"}</a>
                     </li>
                     <li>
-                        <a href="#eventos" className="flex h-full items-center lg:text-lg font-medium p-2 text-white hover:scale-110 transform transition duration-y">{(Language == "Portuguese") ? "Eventos" : "Events"}</a>
+                        <a href="#Events" className="Navbar-Link">{(Language == "Portuguese") ? "Eventos" : "Events"}</a>
                     </li>
                     <li>
-                        <a href="#contato" className="flex h-full items-center lg:text-lg font-medium p-2 text-white hover:scale-110 transform transition duration-y">{(Language == "Portuguese") ? "Contato" : "Contacts"}</a>
+                        <a href="#Contacts" className="Navbar-Link">{(Language == "Portuguese") ? "Contato" : "Contacts"}</a>
                     </li>
 
                     <li>
                     {(Language == "Portuguese") ? 
-                        <GB onClick={SwitchLanguage} className="flex h-full items-center lg:text-lg font-medium p-2 text-white hover:scale-110 transform transition duration-y">Switch Language</GB> :
-                        <PT onClick={SwitchLanguage} className="flex h-full items-center lg:text-lg font-medium p-2 text-white hover:scale-110 transform transition duration-y">Mudar Linguagem</PT>
+                    <button onClick={SwitchLanguage}>
+                        <GB  className="Navbar-Mobile-Flag">Switch Language</GB>
+                    </button>
+                    :
+                    <button onClick={SwitchLanguage}>
+                        <PT className="Navbar-Mobile-Flag">Mudar Linguagem</PT>
+                    </button>
                     }   
                     </li>
                 </ul>
             </div>
-        </div>
-        <div className="justify-items-center h-full w-full grid sm:hidden">
-            <VscThreeBars className='text-white h-auto w-8 mb-6' onClick={ () => SetShowNav(!ShowNav)}></VscThreeBars>
-            <div className={`${ShowNav ?  "grid" : "hidden"} h-full w-full grid-rows-4 justify-center gap-4`}>
-                <a href="#sobre" className="text-center font-medium p-2 text-white text-sm">{(Language == "Portuguese") ? "Sobre" : "About"}</a>
-                <a href="#projetos" className="text-center font-medium p-2 text-white text-sm">{(Language == "Portuguese") ? "Projetos" : "Projects"}</a>
-                <a href="#eventos" className="text-center font-medium p-2 text-white text-sm">{(Language == "Portuguese") ? "Eventos" : "Events"}</a>
-                <a href="#contato" className="text-center font-medium p-2 text-white text-sm">{(Language == "Portuguese") ? "Contato" : "Contacts"}</a>
+        </nav>
+        <nav className="Navbar-Mobile">
+            <button onClick={ () => SetShowNav(!ShowNav) }>
+                <VscThreeBars className='ShowMore-Mobile-Icon'></VscThreeBars>
+            </button>
+            <ul className={`${ShowNav ?  "grid" : "hidden"} Navbar-Mobile-Links`}>
+                <li><a href="#About" className="Navbar-Mobile-Link">{(Language == "Portuguese") ? "Sobre" : "About"}</a></li>
+                <li><a href="#Projects" className="Navbar-Mobile-Link">{(Language == "Portuguese") ? "Projetos" : "Projects"}</a></li>
+                <li><a href="#Events" className="Navbar-Mobile-Link">{(Language == "Portuguese") ? "Eventos" : "Events"}</a></li>
+                <li><a href="#Contacts" className="Navbar-Mobile-Link">{(Language == "Portuguese") ? "Contato" : "Contacts"}</a></li>
                 {(Language == "Portuguese") ? 
-                <GB onClick={SwitchLanguage} className="h-auto w-16 items-center font-medium p-2 text-white">Switch Language</GB> :
-                <PT onClick={SwitchLanguage} className="h-auto w-16 items-center font-medium p-2 text-white">Mudar Linguagem</PT>
+                <li>
+                    <button onClick={SwitchLanguage}>
+                        <GB  className="Navbar-Mobile-Flag">Switch Language</GB>
+                    </button>
+                </li> 
+                :
+                <li>
+                    <button onClick={SwitchLanguage}>
+                        <PT className="Navbar-Mobile-Flag">Mudar Linguagem</PT>
+                    </button>
+                </li>
                 }
                 
-            </div>
-        </div>
+            </ul>
+        </nav>
     </header>
     )
 }

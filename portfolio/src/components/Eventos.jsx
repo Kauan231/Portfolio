@@ -39,18 +39,18 @@ function Gallery() {
 
     return (
         <>
-        <div style={{backgroundImage: "url('" + Image + "')"}} className='sm:h-[80vh] h-[30vh] w-full bg-cover bg-center' id="gallery">
-            <div className='grid grid-cols-2 h-full w-full'>
-                    <div className="flex place-items-center justify-start">
-                        <a onClick={ChangeImageLeft} >
-                            <FaArrowAltCircleLeft className='lg:h-[20vh] h-[10vw] w-auto fill-white ml-5'></FaArrowAltCircleLeft>
-                        </a>
+        <div style={{backgroundImage: "url('" + Image + "')"}} className='Gallery-Container' id="gallery">
+            <div className='Gallery-Grid'>
+                    <div className="LeftArrow">
+                        <button onClick={ChangeImageLeft} >
+                            <FaArrowAltCircleLeft className='Gallery-Arrow'></FaArrowAltCircleLeft>
+                        </button>
                     </div>
                     
-                    <div className="flex place-items-center justify-end">
-                        <a onClick={ChangeImageRight}>
-                            <FaArrowAltCircleRight className='lg:h-[20vh] h-[10vw] w-auto fill-white mr-5'/>
-                        </a>
+                    <div className="RightArrow">
+                        <button onClick={ChangeImageRight}>
+                            <FaArrowAltCircleRight className='Gallery-Arrow'/>
+                        </button>
                     </div>
                 </div>
         </div>
@@ -64,16 +64,19 @@ export default function Eventos() {
     const { Language } = useContext(LanguageContext);
     return (
         <>
-        <div className='bg-stone-100' id='eventos'>
-            
-            <div className="bg-neutral-300  w-full h-full flex flex-1 flex-col justify-center items-center">
-                <Gallery />
-                
-                <div className='flex justify-center align-middle'>
-                    <span className='font-semibold lg:text-[3vw] text-[6vw] text-center underline underline-offset-4 sm:pb-12 pb-5 pt-5'>{(Language == "Portuguese") ? "Eventos" : "Events"}</span>
-                </div>
+        <div className="bg-black">
+            <div className="bg-sky-200 Arrow"></div>
+        </div>
 
-                <p className='font-thin lg:text-2xl sm:pl-10 sm:pr-10 pl-2 pr-2 sm:pb-24 pb-12'> 
+        <div className="bg-black pb-24" id='Events'>
+            
+            <article>
+                <div className='Div-Center'>
+                    <h1 className='Title-Center text-white no-underline p-10 sm:p-12'>{(Language == "Portuguese") ? "Eventos" : "Events"}</h1>
+                </div>
+                <Gallery />
+
+                <p className='Event-Paragraph'> 
                 {
                     (Language == "Portuguese") ?
                     <>
@@ -103,7 +106,7 @@ export default function Eventos() {
                 </p>
 
                 
-            </div>
+            </article>
         </div>
         </>
     )

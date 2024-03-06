@@ -5,6 +5,7 @@ import { useState } from "react";
 import { VideoContext } from '../context/videoContext';
 import { useContext } from 'react';
 import { LanguageContext } from "../context/languageContext";
+import './style/Projects.css';
 
 const PersonalProjects = () => {
     const { SetCurrentVideo } = useContext(VideoContext);
@@ -14,30 +15,28 @@ const PersonalProjects = () => {
 
     function Card({Title, Description, Image, Link, Hidden, Video}) {
         return (
-            <div className={`p-5 h-auto bg-gray-300 m-5 mb-10 rounded-[5vh] shadow-gray-400 shadow-[10px_10px_4px_0px] ${Hidden ?  "hidden" : "flex flex-col"}`}>
-                <div style={{backgroundImage: "url('" + Image + "')"}} className='sm:h-[50vh] h-[20vh]  w-full sm:bg-cover bg-contain bg-no-repeat bg-center  rounded-[2vh]'></div>
-                <div className='sm:p-10 p-2 w-full mb-auto'>
-                    <span className='font-semibold text-2xl underline underline-offset-2'>{Title}</span>
-                    <p className='mt-5 text-lg font-medium'>{Description}</p>
-                    
-                </div>
+            <div className={`Card ${Hidden ?  "hidden" : "flex flex-col"}`}>
+                <picture style={{backgroundImage: "url('" + Image + "')"}} className='Card-Image'></picture>
+                <article className='Card-Article'>
+                    <h1 className='Card-Title'>{Title}</h1>
+                    <p className='Card-Paragraph'>{Description}</p>
+                </article>
                 
                 {
                     Video ? <div className="grid grid-cols-2 gap-5">
-                                <a href={Link} className='bg-gray-900 mt-5 rounded-2xl text-center sm:p-3 p-2 w-full hover:-rotate-2 duration-500'>
-                                    <span className='text-white font-extrathin text-2xl'>Github</span>
+                                <a href={Link} className='Card-Button'>
+                                    <span className='Card-Button-Text'>Github</span>
                                 </a>
-                                <button onClick={ () => { SetCurrentVideo(Video); SetOpen(true); } } className='bg-gray-900 mt-5 rounded-2xl text-center  sm:p-3 p-2 w-full hover:-rotate-2 duration-500'>
-                                    <span className='text-white font-extrathin text-2xl'>{(Language == "Portuguese") ? "Assistir" : "Watch"}</span>
+                                <button onClick={ () => { SetCurrentVideo(Video); SetOpen(true); } } className='Card-Button'>
+                                    <span className='Card-Button-Text'>{(Language == "Portuguese") ? "Assistir" : "Watch"}</span>
                                 </button>
-                            </div> : 
-                            <a href={Link} className='bg-gray-900 mt-5 rounded-2xl text-center  sm:p-3 p-2 w-full hover:-rotate-2 duration-500'>
-                                <span className='text-white font-extrathin text-2xl'>Github</span>
+                            </div> 
+                            : 
+                            <a href={Link} className='Card-Button'>
+                                <span className='Card-Button-Text'>Github</span>
                             </a>
                     
                 }
-                
-                
             </div>
         )
     }
@@ -50,15 +49,15 @@ const PersonalProjects = () => {
         if(ArrayOfProjects.length > CardLimit) {
             return (
                 <>
-                <div className='lg:grid lg:grid-cols-3 bg-stone-100 mb-24'>
+                <div className='Card-Grid'>
                     {ItemsToShow}
                 </div>
-                <div className="flex justify-center align-middle w-full mb-24">
+                <div className="ShowMore-Center">
                     <button onClick={()=>{
                         SetCardLimit(CardLimit+3);
                     }} 
-                    className='bg-gray-900 rounded-2xl text-center p-3 w-1/2 h-1/2 hover:-rotate-2 duration-500'>
-                        <span className='text-white font-extrathin text-2xl'>{(Language == "Portuguese") ? "Mostrar mais" : "Show More"}</span>
+                    className='ShowMore-Button'>
+                        <span className='Card-Button-Text'>{(Language == "Portuguese") ? "Mostrar mais" : "Show More"}</span>
                     </button>
                 </div>
                 </>
@@ -66,7 +65,7 @@ const PersonalProjects = () => {
         }
     
         return (
-            <div className='lg:grid lg:grid-cols-3 bg-stone-100 mb-24'>
+            <div className='Card-Grid'>
                 { ItemsToShow }
             </div>
         )
