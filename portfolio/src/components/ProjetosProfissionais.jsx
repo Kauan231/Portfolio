@@ -12,15 +12,15 @@ const ProfessionalProjects = () => {
     const [CardLimit, SetCardLimit] = useState(3);
     const { Language } = useContext(LanguageContext);
     
-    function CardVideo({Title, Image, Link, Hidden}) {
+    function CardVideo({Title, Image, Item, Hidden}) {
         return (
             <div className={`SpecialCard ${Hidden ?  "hidden" : "flex flex-col"} `}>
                 <picture style={{backgroundImage: "url('" + Image + "')"}} className='Card-Image'></picture>
                 <div className='p-10 w-full mb-auto grid justify-center'>
                     <span className='font-bold text-3xl text-black'>{Title}</span>
                 </div>
-                <button onClick={ () => { SetCurrentVideo(Link); SetOpen(true); } } className='bg-gray-300 Card-Button'>
-                    <span className='SpecialCard-Title'>{(Language == "Portuguese") ? "Assistir" : "Watch"}</span>
+                <button onClick={ () => { SetCurrentVideo(Item); SetOpen(true); } } className='bg-gray-300 Card-Button'>
+                    <span className='SpecialCard-Title'>{(Language == "Portuguese") ? "Visualizar" : "Show"}</span>
                 </button>
             </div>
         )
@@ -28,7 +28,7 @@ const ProfessionalProjects = () => {
 
     function ShowCards({ArrayOfProjects}) {  
         let ItemsToShow = ArrayOfProjects.map((item, index) => 
-            <CardVideo Title={item.Title} Description={item.Description} Image={item.Image} Link={item.Link} key={index} Hidden={((index + 1)  > CardLimit)}> </CardVideo>
+            <CardVideo Title={item.Title} Image={item.Image} Item={item} key={index} Hidden={((index + 1)  > CardLimit)}> </CardVideo>
         )
     
         if(ArrayOfProjects.length > CardLimit) {

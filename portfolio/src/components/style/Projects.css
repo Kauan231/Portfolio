@@ -11,11 +11,11 @@
 }
 
 .Card-Article {
-    @apply sm:p-10 p-2 w-full mb-auto;
+    @apply sm:p-5 p-2 w-full mb-auto;
 }
 
 .Card-Title {
-    @apply font-semibold text-2xl underline underline-offset-2;
+    @apply font-semibold text-2xl no-underline underline-offset-2 text-center;
 }
 
 .Card-Paragraph {

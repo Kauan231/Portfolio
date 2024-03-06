@@ -40,7 +40,8 @@ export const personalProjectsEN = [
         - The game will end when all orders are fulfilled or when time runs out. <br/>
         </>,
         "Image": thumbBurguer,
-        "Link": "https://github.com/Kauan231/Burguer-Game"
+        "Link": "https://github.com/Kauan231/Burguer-Game",
+        "Video": "https://youtu.be/d9-kVnSytXM"
     },
     {
         "Title": "Snake game - Win32 API - C++",
@@ -58,26 +59,57 @@ export const workProjectsEN = [
     {
         "Title": "Roche Lab Builder",
         "Image": thumbRoche,
-        "Link": "https://youtu.be/x5Gbx0zI4VY"
+        "Description": <>
+        I participated in an exciting project for Roche, where we created a virtual laboratory with technical details of products. 
+        I developed an intuitive drag & drop interface, allowing users to build their own laboratories and share them 
+        via email or QR code. We used .NET, integrated with Node.js, and implemented FTP for file transfer. The goal is to offer 
+        an engaging and informative experience to medical professionals.
+        </>,
+        "Video": "https://youtu.be/x5Gbx0zI4VY"
     },
     {
         "Title": "Kinea Racer",
+        "Description": <>
+        In this project, I was responsible for developing a space racing game for the Kinea brand. The main objective of this 
+        game is to collect the highest amount of points and complete the course in the shortest time possible. The participant
+         who achieves the best position in the ranking will be awarded a special prize.
+        Within the game, each special coin collected represents one of Kinea's high-quality products, 
+        providing players with an immersive brand experience and greater knowledge about its products.
+        </>,
         "Image": thumbNave,
-        "Link": "https://youtu.be/L-m8cqTo44o"
+        "Video": "https://youtu.be/L-m8cqTo44o"
     },
     {
         "Title": "Dragon Kinect",
+        "Description": <>
+        In this exciting project, I took on the responsibility of creating a unique interactive experience, where participants could feel like true dragon lords. 
+        The promotional action was developed to celebrate HBO's House of the Dragon series, and the location chosen for this adventure was a shopping mall in São Paulo.
+        <br></br>
+        <br></br>
+        The movement of the dragon was done using a Kinect 2.0 sensor.
+        </>,
         "Image": thumbDragon,
-        "Link": "https://youtu.be/iLbuda_haoM"
+        "Video": "https://youtu.be/iLbuda_haoM"
     },
     {
         "Title": "Ypê - Memory Game",
         "Image": thumbYpe,
-        "Link": "https://youtube.com/shorts/8iIfaG7YSuE"
+        "Description": <>
+        I developed a fun memory game featuring Ypê's iconic products. At the Apas event in 2023, players were able to test their memory skills
+        while exploring the brand's range of products, and at the end of the challenge, they had a surprise: exclusive Ypê gifts! The personalized
+        delivery made this moment even more special for each participant.
+        </>,
+        "Video": "https://youtu.be/aMt2eM6y1eA"
     },
     {
         "Title": "Tetris",
+        "Description": <>
+        This was an exciting project that brought back the nostalgia of retro games to a shopping mall in Rio de Janeiro. 
+        My contribution involved creating an interactive environment that combines the captivating simplicity of classics with technological innovation. 
+        The installation of these traditional games in a modern context provides an engaging experience for visitors of all ages, celebrating the 
+        union between the past and contemporary technology.
+        </>,
         "Image": thumbTetris,
-        "Link": "https://youtube.com/shorts/f_X0RoumFmg"
+        "Video": "https://youtube.com/shorts/f_X0RoumFmg"
     },
 ]

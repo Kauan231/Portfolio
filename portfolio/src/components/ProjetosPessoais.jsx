@@ -13,26 +13,25 @@ const PersonalProjects = () => {
     const [CardLimit, SetCardLimit] = useState(3);
     const { Language } = useContext(LanguageContext);
 
-    function Card({Title, Description, Image, Link, Hidden, Video}) {
+    function Card({Title, Image, Item, Hidden}) {
         return (
             <div className={`Card ${Hidden ?  "hidden" : "flex flex-col"}`}>
                 <picture style={{backgroundImage: "url('" + Image + "')"}} className='Card-Image'></picture>
                 <article className='Card-Article'>
                     <h1 className='Card-Title'>{Title}</h1>
-                    <p className='Card-Paragraph'>{Description}</p>
                 </article>
                 
                 {
-                    Video ? <div className="grid grid-cols-2 gap-5">
-                                <a href={Link} className='Card-Button'>
+                    Item.Video ? <div className="grid grid-cols-2 gap-5">
+                                <a href={Item.Link} className='Card-Button'>
                                     <span className='Card-Button-Text'>Github</span>
                                 </a>
-                                <button onClick={ () => { SetCurrentVideo(Video); SetOpen(true); } } className='Card-Button'>
-                                    <span className='Card-Button-Text'>{(Language == "Portuguese") ? "Assistir" : "Watch"}</span>
+                                <button onClick={ () => { SetCurrentVideo(Item); SetOpen(true); } } className='Card-Button'>
+                                    <span className='Card-Button-Text'>{(Language == "Portuguese") ? "Visualizar" : "Show"}</span>
                                 </button>
                             </div> 
                             : 
-                            <a href={Link} className='Card-Button'>
+                            <a href={Item.Link} className='Card-Button'>
                                 <span className='Card-Button-Text'>Github</span>
                             </a>
                     
@@ -43,7 +42,7 @@ const PersonalProjects = () => {
     
     function ShowCards({ArrayOfProjects}) { 
         let ItemsToShow = ArrayOfProjects.map((item, index) => 
-            <Card Title={item.Title} Description={item.Description} Image={item.Image} Link={item.Link} key={index} Hidden={((index + 1)  > CardLimit)} Video={item.Video}> </Card>
+            <Card Title={item.Title} Image={item.Image} Item={item} key={index} Hidden={((index + 1)  > CardLimit)}> </Card>
         )
     
         if(ArrayOfProjects.length > CardLimit) {
