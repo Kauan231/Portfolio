@@ -1,9 +1,9 @@
 .Video-Container {
-    @apply flex flex-1 flex-wrap  md:grid md:col-span-4 justify-center lg:justify-normal pr-2 pl-2 pt-2 md:pl-0 md:pr-0 h-auto w-full md:min-h-[60vh] md:min-w-[60vw];
+    @apply flex flex-1 flex-wrap  md:grid md:col-span-4 justify-center lg:justify-normal pr-2 pl-2 sm:pt-0 pt-2 md:pl-0 md:pr-0 h-auto w-full md:min-h-[60vh] md:min-w-[60vw] bg-slate-200 ; 
 }
 
 .Overlay-Container {
-    @apply sm:overflow-clip overflow-y-auto overscroll-none fixed left-0 right-0 top-0 bottom-0 flex flex-wrap mr-5 md:mr-10 ml-5 md:ml-10 mt-20 md:mt-[2vh] min-[1920px]:mt-[10vh] mb-20 h-[80vh] sm:h-fit w-auto rounded-2xl  border-8 border-slate-800 z-20 bg-white;
+    @apply sm:overflow-clip overflow-y-auto overscroll-none fixed left-0 right-0 top-0 bottom-0 flex flex-wrap mr-5 md:mr-10 ml-5 md:ml-10 mt-20 md:mt-[2vh] min-[1920px]:mt-[10vh] mb-20 h-[80vh] md:min-h-[60vh]  w-auto rounded-2xl  border-8 border-slate-800 z-20 bg-white;
 }
 
 .Backdrop {
@@ -15,15 +15,15 @@
 }
 
 .Description-Container {
-    @apply h-auto w-full flex flex-1 flex-wrap justify-center items-center;
+    @apply h-auto w-full flex flex-1 flex-wrap justify-center items-center   p-5 font-thin;
 }
 .Description-Title {
-    @apply text-xl font-bold no-underline p-2 m-0;
+    @apply text-2xl font-bold no-underline p-2 m-0;
 }
 .Project-Container {
-    @apply flex md:grid md:col-span-2  lg:pl-12 lg:pr-12 h-auto p-5 ;
+    @apply flex md:grid md:col-span-2 h-auto  ; /*  lg:pl-12 lg:pr-12 */
 }
 
 .Project-Close-Icon {
-    @apply  w-full h-10 text-black mt-0 md:block hidden;
+    @apply  w-full h-10 text-white mt-0 md:block hidden bg-slate-500  p-1;
 }

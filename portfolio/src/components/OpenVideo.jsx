@@ -32,7 +32,6 @@ const OpenVideo = () => {
                                             <h1 className="Card-Button-Text">Github</h1>
                                         </a> 
                                     }
-                                    
                                 </div>
                                 
                             </div>

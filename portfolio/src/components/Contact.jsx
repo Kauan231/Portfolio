@@ -11,6 +11,9 @@ export default function Contato() {
     
     return (
         <>
+        <div className="bg-stone-200 pb-6">
+            <div className="bg-black Arrow"></div>
+        </div>
         <div className="bg-stone-200 pb-auto" id="Contacts">
             <div className='Contacts-Title'>
                 <h1 className='Title-Center no-underline m-0 p-0 pb-5'>{(Language == "Portuguese") ? "Contatos" : "Contacts"}</h1>

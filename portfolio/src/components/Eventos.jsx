@@ -65,7 +65,7 @@ export default function Eventos() {
     return (
         <>
         <div className="bg-black">
-            <div className="bg-sky-200 Arrow"></div>
+            <div className="bg-white Arrow"></div>
         </div>
 
         <div className="bg-black pb-24" id='Events'>

@@ -14,15 +14,32 @@ const ProfessionalProjects = () => {
     
     function CardVideo({Title, Image, Item, Hidden}) {
         return (
-            <div className={`SpecialCard ${Hidden ?  "hidden" : "flex flex-col"} `}>
-                <picture style={{backgroundImage: "url('" + Image + "')"}} className='Card-Image'></picture>
-                <div className='p-10 w-full mb-auto grid justify-center'>
-                    <span className='font-bold text-3xl text-black'>{Title}</span>
+            <>
+            <div className="hidden sm:block">
+                <div className={`SpecialCard relative z-0 ${Hidden ?  "hidden" : "flex flex-col"} `} onClick={ () => { SetCurrentVideo(Item); SetOpen(true); } }>
+                    <div className="bg-black/70 w-full h-full absolute z-10  justify-center items-center hidden sm:flex opacity-0 hover:opacity-100 duration-500 ">
+                        <h1 className='text-2xl font-bold text-white'>{(Language == "Portuguese") ? "Visualizar" : "Show"}</h1>
+                    </div>
+                    <picture style={{backgroundImage: "url('" + Image + "')"}} className='Card-Image'></picture>
+                    <div className='p-2 w-full mb-auto grid justify-center'>
+                        <span className='font-bold text-3xl text-black'>{Title}</span>
+                    </div>
                 </div>
-                <button onClick={ () => { SetCurrentVideo(Item); SetOpen(true); } } className='bg-gray-300 Card-Button'>
-                    <span className='SpecialCard-Title'>{(Language == "Portuguese") ? "Visualizar" : "Show"}</span>
-                </button>
             </div>
+            <div className="block sm:hidden">
+                <div className={`SpecialCard-SM ${Hidden ?  "hidden" : "flex flex-col"} `}>
+                    <picture style={{backgroundImage: "url('" + Image + "')"}} className='Card-Image-SM'></picture>
+                    <div className='p-10 w-full mb-auto grid justify-center'>
+                        <span className='font-bold text-3xl text-black'>{Title}</span>
+                    </div>
+                    <button onClick={ () => { SetCurrentVideo(Item); SetOpen(true); } } className='bg-gray-300 Card-Button'>
+                        <span className='SpecialCard-Title-SM'>{(Language == "Portuguese") ? "Visualizar" : "Show"}</span>
+                    </button>
+                </div>
+            </div>
+            
+            </>
+            
         )
     }
 
@@ -34,7 +51,7 @@ const ProfessionalProjects = () => {
         if(ArrayOfProjects.length > CardLimit) {
             return (
                 <>
-                <div className='Card-Grid'>
+                <div className='SpecialCard-Grid'>
                     {ItemsToShow}
                 </div>
                 <div className="ShowMore-Center">
@@ -50,7 +67,7 @@ const ProfessionalProjects = () => {
         }
     
         return (
-            <div className='Card-Grid'>
+            <div className='SpecialCard-Grid'>
                 { ItemsToShow }
             </div>
         )
@@ -61,3 +78,10 @@ const ProfessionalProjects = () => {
 }
 
 export default ProfessionalProjects;
+
+
+/*
+<button onClick={ () => { SetCurrentVideo(Item); SetOpen(true); } } className='bg-gray-300 Card-Button'>
+    <span className='SpecialCard-Title'>{(Language == "Portuguese") ? "Visualizar" : "Show"}</span>
+</button>
+*/

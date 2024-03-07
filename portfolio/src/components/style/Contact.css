@@ -7,7 +7,7 @@
 }
 
 .Contacts-Title {
-    @apply flex justify-center align-middle sm:pt-12 pt-2;
+    @apply flex justify-center align-middle ; /* sm:pt-12 pt-2 */
 }
 
 .SocialMedia-Title {
@@ -15,9 +15,9 @@
 }
 
 .SocialMedia-Container {
-    @apply justify-center align-middle sm:pt-12 pt-2 p-6;
+    @apply justify-center align-middle  p-6; /* sm:pt-12 pt-2 p-6 */
 }
 
 .Align-Icons {
-    @apply sm:grid sm:grid-cols-3 pb-12 flex flex-wrap flex-1 justify-center align-middle ;
+    @apply sm:grid sm:grid-cols-3  p-2 flex flex-wrap flex-1 justify-center align-middle ; /* pb-12 */
 }
