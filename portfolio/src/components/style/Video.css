@@ -4,6 +4,25 @@
 
 .Overlay-Container {
     @apply sm:overflow-clip overflow-y-auto overscroll-none fixed left-0 right-0 top-0 bottom-0 flex flex-wrap mr-5 md:mr-10 ml-5 md:ml-10 mt-20 md:mt-[2vh] min-[1920px]:mt-[10vh] mb-20 h-[80vh] md:min-h-[60vh]  w-auto rounded-2xl  border-8 border-slate-800 z-20 bg-white;
+    animation: ScaleTransition ease 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes ScaleTransition {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    50%{
+        opacity: 10%;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .Backdrop {

@@ -44,7 +44,7 @@
 }
 
 .Card-Grid {
-    @apply lg:grid lg:grid-cols-3 min-[1920px]:pl-40 min-[1920px]:pr-40 pl-10 pr-10;
+    @apply lg:grid lg:grid-cols-3 min-[1920px]:pl-40 min-[1920px]:pr-40 pl-10 pr-10 ;
 }
 
 .ShowMore-Center {

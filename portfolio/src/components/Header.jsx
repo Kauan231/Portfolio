@@ -20,7 +20,7 @@ export default function Header(){
     <header className="Header">
         <nav className="Navbar">
             <div className='Logo'>
-                <a href="/" className='Logo-Item'>Kauan Ramos</a>
+                <a href="#" className='Logo-Item'>Kauan Ramos</a>
             </div>
             <div className='Center-Contents'>
                 <ul className="Navbar-Links ">

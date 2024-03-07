@@ -64,8 +64,8 @@ const PersonalProjects = () => {
             
             <ul className="w-full flex flex-wrap gap-8 justify-center pb-10">
                 <li><button className={`${Filter == "All" ? "font-semibold text-xl" : "font-thin text-lg"}`}   onClick={() => { SetFilter("All") }}>{(Language == "Portuguese") ? "Todos" : "All"}</button></li>
-                <li><button className={`${Filter == "Web" ? "font-semibold text-xl" : "font-thin text-lg"}`}   onClick={() => { SetFilter("Web") }}>Web</button></li>
-                <li><button className={`${Filter == "Game" ? "font-semibold text-xl" : "font-thin text-lg"}`}  onClick={() => { SetFilter("Game") }}>Game Development</button></li>
+                <li><button className={`${Filter == "Web" ? "font-semibold text-xl" : "font-thin text-lg"}`}   onClick={() => { SetFilter("Web") }}>{(Language == "Portuguese") ? "Sites" : "Web"}</button></li>
+                <li><button className={`${Filter == "Game" ? "font-semibold text-xl" : "font-thin text-lg"}`}  onClick={() => { SetFilter("Game") }}>{(Language == "Portuguese") ? "Desenvolvimento de Jogos" : "Game Development"}</button></li>
                 <li><button className={`${Filter == "Other" ? "font-semibold text-xl" : "font-thin text-lg"}`} onClick={() => { SetFilter("Other") }}>{(Language == "Portuguese") ? "Outros" : "Other"}</button></li>
             </ul>
             <div className='Card-Grid'>
@@ -96,5 +96,3 @@ const PersonalProjects = () => {
 }
 
 export default PersonalProjects;
-
-//  ${Hidden ?  "hidden" : "flex flex-col"}
