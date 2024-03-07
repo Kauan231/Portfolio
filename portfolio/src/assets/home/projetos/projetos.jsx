@@ -20,7 +20,8 @@ export const personalProjects = [
         vagas de trabalho.
         </>,
         "Image": thumbCurriculum,
-        "Link": "https://github.com/Kauan231/Simple-Curriculum"
+        "Link": "https://github.com/Kauan231/Simple-Curriculum",
+        "Tag": "Web"
     },
     {
         "Title": "Store-Management",
@@ -32,7 +33,8 @@ export const personalProjects = [
         </>,
         "Image": thumbStore,
         "Link": "https://github.com/Kauan231/Store-Management",
-        "Video": "https://youtu.be/Z-ZmqmdiBaM"
+        "Video": "https://youtu.be/Z-ZmqmdiBaM",
+        "Tag": "Other"
     },
     {
         "Title": "Burguer-Game",
@@ -46,7 +48,8 @@ export const personalProjects = [
         </>,
         "Image": thumbBurguer,
         "Link": "https://github.com/Kauan231/Burguer-Game",
-        "Video": "https://youtu.be/d9-kVnSytXM"
+        "Video": "https://youtu.be/d9-kVnSytXM",
+        "Tag": "Game"
     },
     {
         "Title": "Snake game - Win32 API - C++",
@@ -56,7 +59,8 @@ export const personalProjects = [
         </>,
         "Image": thumbSnake,
         "Link": "https://github.com/Kauan231/Snake-game",
-        "Video" : "https://youtu.be/DRRxDrfRI1c"
+        "Video" : "https://youtu.be/DRRxDrfRI1c",
+        "Tag": "Game"
     },
 ]
 
@@ -72,7 +76,8 @@ export const workProjects = [
          uma experiência envolvente e informativa aos profissionais da área médica
         </>,
         "Image": thumbRoche,
-        "Video": "https://youtu.be/x5Gbx0zI4VY"
+        "Video": "https://youtu.be/x5Gbx0zI4VY",
+        "Tag": "Game"
     },
     {
         "Title": "Kinea Racer",
@@ -85,7 +90,8 @@ export const workProjects = [
         proporcionando aos jogadores uma experiência imersiva da marca e um maior conhecimento sobre seus produtos.
         </>,
         "Image": thumbNave,
-        "Video": "https://youtu.be/L-m8cqTo44o"
+        "Video": "https://youtu.be/L-m8cqTo44o",
+        "Tag": "Game"
     },
     {
         "Title": "Dragão Kinect",
@@ -98,7 +104,8 @@ export const workProjects = [
         A movimentação do Dragão foi feita utilizando um sensor Kinect 2.0.
         </>,
         "Image": thumbDragon,
-        "Video": "https://youtu.be/iLbuda_haoM"
+        "Video": "https://youtu.be/iLbuda_haoM",
+        "Tag": "Game"
     },
     {
         "Title": "Ypê Jogo da Memória",
@@ -108,7 +115,8 @@ export const workProjects = [
         A entrega personalizada tornou esse momento ainda mais especial para cada participante.
         </>,
         "Image": thumbYpe,
-        "Video": "https://youtu.be/aMt2eM6y1eA"
+        "Video": "https://youtu.be/aMt2eM6y1eA",
+        "Tag": "Game"
     },
     {
         "Title": "Tetris",
@@ -118,6 +126,7 @@ export const workProjects = [
         contexto moderno proporciona uma experiência envolvente para visitantes de todas as idades, celebrando a união entre o passado e a tecnologia contemporânea.
         </>,
         "Image": thumbTetris,
-        "Video": "https://youtube.com/shorts/f_X0RoumFmg"
+        "Video": "https://youtube.com/shorts/f_X0RoumFmg",
+        "Tag": "Game"
     },
 ]

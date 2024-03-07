@@ -1,7 +1,7 @@
 import {personalProjects} from "../assets/home/projetos/projetos";
 import {personalProjectsEN} from "../assets/home/projetos/projects";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { VideoContext } from '../context/videoContext';
 import { useContext } from 'react';
 import { LanguageContext } from "../context/languageContext";
@@ -12,10 +12,11 @@ const PersonalProjects = () => {
     const { SetOpen } = useContext(VideoContext);
     const [CardLimit, SetCardLimit] = useState(3);
     const { Language } = useContext(LanguageContext);
+    const [Filter, SetFilter] = useState("All");
 
     function Card({Title, Image, Item, Hidden}) {
         return (
-            <div className={`Card ${Hidden ?  "hidden" : "flex flex-col"}`}>
+            <div className={`Card ${Hidden ?  "hidden" : "flex flex-col "}` }> 
                 <picture style={{backgroundImage: "url('" + Image + "')"}} className='Card-Image'></picture>
                 <article className='Card-Article'>
                     <h1 className='Card-Title'>{Title}</h1>
@@ -39,18 +40,40 @@ const PersonalProjects = () => {
             </div>
         )
     }
+
+    useEffect(() => {
+        SetCardLimit(3);
+    }, [Filter]);
     
     function ShowCards({ArrayOfProjects}) { 
-        let ItemsToShow = ArrayOfProjects.map((item, index) => 
-            <Card Title={item.Title} Image={item.Image} Item={item} key={index} Hidden={((index + 1)  > CardLimit)}> </Card>
+        let filtered = ArrayOfProjects;
+        if(Filter != "All") {
+            filtered = ArrayOfProjects.filter((item) => item.Tag == Filter);
+        }   
+    
+
+        let ItemsToShow = filtered.map((item, index) => {
+            return <Card Title={item.Title} Image={item.Image} Item={item} key={index} Hidden={(((index + 1)  > CardLimit))}> </Card>
+        }
+            
         )
     
-        if(ArrayOfProjects.length > CardLimit) {
-            return (
-                <>
-                <div className='Card-Grid'>
-                    {ItemsToShow}
-                </div>
+
+        return (
+            <>
+            
+            <ul className="w-full flex flex-wrap gap-8 justify-center pb-10">
+                <li><button className={`${Filter == "All" ? "font-semibold text-xl" : "font-thin text-lg"}`}   onClick={() => { SetFilter("All") }}>{(Language == "Portuguese") ? "Todos" : "All"}</button></li>
+                <li><button className={`${Filter == "Web" ? "font-semibold text-xl" : "font-thin text-lg"}`}   onClick={() => { SetFilter("Web") }}>Web</button></li>
+                <li><button className={`${Filter == "Game" ? "font-semibold text-xl" : "font-thin text-lg"}`}  onClick={() => { SetFilter("Game") }}>Game Development</button></li>
+                <li><button className={`${Filter == "Other" ? "font-semibold text-xl" : "font-thin text-lg"}`} onClick={() => { SetFilter("Other") }}>{(Language == "Portuguese") ? "Outros" : "Other"}</button></li>
+            </ul>
+            <div className='Card-Grid'>
+                {ItemsToShow}
+            </div>
+
+            {
+                filtered.length > CardLimit &&
                 <div className="ShowMore-Center">
                     <button onClick={()=>{
                         SetCardLimit(CardLimit+3);
@@ -59,14 +82,9 @@ const PersonalProjects = () => {
                         <span className='Card-Button-Text'>{(Language == "Portuguese") ? "Mostrar mais" : "Show More"}</span>
                     </button>
                 </div>
-                </>
-            )
-        }
-    
-        return (
-            <div className='Card-Grid'>
-                { ItemsToShow }
-            </div>
+            }
+            
+            </>
         )
     }
 
@@ -78,3 +96,5 @@ const PersonalProjects = () => {
 }
 
 export default PersonalProjects;
+
+//  ${Hidden ?  "hidden" : "flex flex-col"}

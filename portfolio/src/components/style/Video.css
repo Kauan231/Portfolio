@@ -15,13 +15,13 @@
 }
 
 .Description-Container {
-    @apply h-auto w-full flex flex-1 flex-wrap justify-center items-center   p-5 font-thin;
+    @apply h-fit w-full flex flex-1 flex-wrap justify-center items-center   p-5 font-thin;
 }
 .Description-Title {
     @apply text-2xl font-bold no-underline p-2 m-0;
 }
 .Project-Container {
-    @apply flex md:grid md:col-span-2 h-auto  ; /*  lg:pl-12 lg:pr-12 */
+    @apply flex md:grid md:col-span-2 h-auto ; /*  lg:pl-12 lg:pr-12 */
 }
 
 .Project-Close-Icon {

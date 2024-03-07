@@ -17,7 +17,8 @@ export const personalProjectsEN = [
         Simple-Curriculum is a personal project to enhance my skills in ASP.NET using the QuestPDF library, as well as explore frontend tools like ReactJS, Typescript, and Tailwind. The project's goal is to provide an API for automatically formatting resumes, which can be used as an individual tool or as an example in a job vacancy website tool.
         </>,
         "Image": thumbCurriculum,
-        "Link": "https://github.com/Kauan231/Simple-Curriculum"
+        "Link": "https://github.com/Kauan231/Simple-Curriculum",
+        "Tag": "Web"
     },
     {
         "Title": "Store-Management",
@@ -27,7 +28,8 @@ export const personalProjectsEN = [
         </>,
         "Image": thumbStore,
         "Link": "https://github.com/Kauan231/Store-Management",
-        "Video": "https://youtu.be/Z-ZmqmdiBaM"
+        "Video": "https://youtu.be/Z-ZmqmdiBaM",
+        "Tag": "Other"
     },
     {
         "Title": "Burguer-Game",
@@ -41,7 +43,8 @@ export const personalProjectsEN = [
         </>,
         "Image": thumbBurguer,
         "Link": "https://github.com/Kauan231/Burguer-Game",
-        "Video": "https://youtu.be/d9-kVnSytXM"
+        "Video": "https://youtu.be/d9-kVnSytXM",
+        "Tag": "Game"
     },
     {
         "Title": "Snake game - Win32 API - C++",
@@ -51,7 +54,8 @@ export const personalProjectsEN = [
         </>,
         "Image": thumbSnake,
         "Link": "https://github.com/Kauan231/Snake-game",
-        "Video" : "https://youtu.be/DRRxDrfRI1c"
+        "Video" : "https://youtu.be/DRRxDrfRI1c",
+        "Tag": "Game"
     },
 ]
 

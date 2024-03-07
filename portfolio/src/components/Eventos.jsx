@@ -64,15 +64,10 @@ export default function Eventos() {
     const { Language } = useContext(LanguageContext);
     return (
         <>
-        <div className="bg-black">
-            <div className="bg-white Arrow"></div>
-        </div>
-
-        <div className="bg-black pb-24" id='Events'>
-            
+        <div className="bg-neutral-300 pb-24" id='Events'>
             <article>
                 <div className='Div-Center'>
-                    <h1 className='Title-Center text-white no-underline p-10 sm:p-12'>{(Language == "Portuguese") ? "Eventos" : "Events"}</h1>
+                    <h1 className='Title-Center'>{(Language == "Portuguese") ? "Eventos" : "Events"}</h1>
                 </div>
                 <Gallery />
 

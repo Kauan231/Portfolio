@@ -11,9 +11,8 @@ export default function AreasDeAtuacao(){
 
     return (
         <section id="Skills" className="Section">
-            <div className="Arrow" id="Arrow"></div>
-            <div className='Div-Center'>
-                <h1 className='Title-Center'>{(Language == "Portuguese") ? "Áreas de Atuação" : "Expertise"}</h1>
+            <div className='Div-Center m-0 p-0'>
+                <h1 className='Title-Center m-0 pb-2'>{(Language == "Portuguese") ? "Áreas de Atuação" : "Expertise"}</h1>
             </div>
             <Frontend/>
             <Backend/>

@@ -7,6 +7,7 @@ export default function About() {
     const { Language } = useContext(LanguageContext);
     return (
         <> 
+        
         <section id="About" className="About"> 
             <figure className="Figure">
                 <img  src={Photo} className="Image"></img>
@@ -32,6 +33,7 @@ export default function About() {
                 </p>
             </article>
         </section>
+        <div className="Arrow" id="Arrow"></div>
         </>
     )
 }

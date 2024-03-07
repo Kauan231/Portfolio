@@ -19,7 +19,6 @@ const OpenVideo = () => {
                             <ReactPlayer url={currentVideo.Video}  width='100%'height='100%' controls/>
                         </div>
                         <div className="Project-Container">
-                            <div>
                                 <IoIosCloseCircle onClick={() => SetOpen(false) } className="Project-Close-Icon"></IoIosCloseCircle>
                                 <div className="Description-Container">
                                     <h1 className="Description-Title">{currentVideo.Title}</h1>
@@ -32,8 +31,6 @@ const OpenVideo = () => {
                                             <h1 className="Card-Button-Text">Github</h1>
                                         </a> 
                                     }
-                                </div>
-                                
                             </div>
                             
                             

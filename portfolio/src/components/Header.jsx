@@ -31,7 +31,7 @@ export default function Header(){
                         <a href="#Projects" className="Navbar-Link">{(Language == "Portuguese") ? "Projetos" : "Projects"}</a>
                     </li>
                     <li>
-                        <a href="#Events" className="Navbar-Link">{(Language == "Portuguese") ? "Eventos" : "Events"}</a>
+                        <a href="#Skills" className="Navbar-Link">{(Language == "Portuguese") ? "Habilidades" : "Skills"}</a>
                     </li>
                     <li>
                         <a href="#Contacts" className="Navbar-Link">{(Language == "Portuguese") ? "Contato" : "Contacts"}</a>
@@ -58,7 +58,7 @@ export default function Header(){
             <ul className={`${ShowNav ?  "grid" : "hidden"} Navbar-Mobile-Links`}>
                 <li><a href="#About" className="Navbar-Mobile-Link">{(Language == "Portuguese") ? "Sobre" : "About"}</a></li>
                 <li><a href="#Projects" className="Navbar-Mobile-Link">{(Language == "Portuguese") ? "Projetos" : "Projects"}</a></li>
-                <li><a href="#Events" className="Navbar-Mobile-Link">{(Language == "Portuguese") ? "Eventos" : "Events"}</a></li>
+                <li><a href="#Skills" className="Navbar-Mobile-Link">{(Language == "Portuguese") ? "Habilidades" : "Expertise"}</a></li>
                 <li><a href="#Contacts" className="Navbar-Mobile-Link">{(Language == "Portuguese") ? "Contato" : "Contacts"}</a></li>
                 {(Language == "Portuguese") ? 
                 <li>

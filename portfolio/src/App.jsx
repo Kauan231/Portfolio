@@ -15,10 +15,10 @@ function App() {
     <VideoProvider>
         <Header/>
         <Hero/>
-        <About/>
+        <About/> 
         <AreasDeAtuacao/>
         <Projetos/>
-        <Eventos/>
+        
         <Contato/>
         <Footer/>
       </VideoProvider>
@@ -26,3 +26,5 @@ function App() {
 }
 
 export default App
+
+//<Eventos/>

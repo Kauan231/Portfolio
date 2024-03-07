@@ -3,7 +3,7 @@
 }
 
 .Event-Paragraph {
-    @apply font-thin lg:text-2xl lg:p-24 p-10  text-white;
+    @apply font-thin lg:text-2xl lg:p-24 p-10  text-black;
 }
 
 .Gallery-Container {

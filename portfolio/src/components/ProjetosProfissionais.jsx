@@ -9,7 +9,7 @@ import './style/Projects.css';
 
 const ProfessionalProjects = () => {
     const { SetCurrentVideo, SetOpen } = useContext(VideoContext);
-    const [CardLimit, SetCardLimit] = useState(3);
+    const [CardLimit, SetCardLimit] = useState(2);
     const { Language } = useContext(LanguageContext);
     
     function CardVideo({Title, Image, Item, Hidden}) {
@@ -21,8 +21,8 @@ const ProfessionalProjects = () => {
                         <h1 className='text-2xl font-bold text-white'>{(Language == "Portuguese") ? "Visualizar" : "Show"}</h1>
                     </div>
                     <picture style={{backgroundImage: "url('" + Image + "')"}} className='Card-Image'></picture>
-                    <div className='p-2 w-full mb-auto grid justify-center'>
-                        <span className='font-bold text-3xl text-black'>{Title}</span>
+                    <div className='p-2 w-full mb-auto grid justify-center bg-gray-700'>
+                        <span className='font-bold text-2xl text-white'>{Title}</span>
                     </div>
                 </div>
             </div>
@@ -56,7 +56,7 @@ const ProfessionalProjects = () => {
                 </div>
                 <div className="ShowMore-Center">
                     <button onClick={()=>{
-                        SetCardLimit(CardLimit+3);
+                        SetCardLimit(CardLimit+2);
                     }} 
                     className='ShowMore-Button'>
                         <span className='Card-Button-Text'>{(Language == "Portuguese") ? "Mostrar mais" : "Show More"}</span>

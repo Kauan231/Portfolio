@@ -1,11 +1,15 @@
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { LanguageContext } from "../context/languageContext";
 import '../components/style/Skills.css'
+import useIsVisible from "../utils/Observer";
 
 export default function Frontend(){
+    const ref1 = useRef();
+    const isVisible1 = useIsVisible(ref1);
+    
     const { Language } = useContext(LanguageContext);
     return (
-        <article className="Skills-Article" > 
+        <article ref={ref1} className={`mb-20 Skills-Article transition-opacity ease-in duration-700 ${isVisible1 ? "opacity-100" : "opacity-0"}`} > 
             <h1 className="Skill-Title">Frontend </h1>
             <aside className="Skills-Aside">
                 {

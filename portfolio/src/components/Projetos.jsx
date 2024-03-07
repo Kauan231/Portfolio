@@ -11,15 +11,15 @@ export default function Projetos() {
     return (
         <section id="Projects">
             <article>
-                <div className="PersonalProjects">
+                <div className="PersonalProjects m-0 p-0">
                     <div className='Div-Center'>
-                        <h1 className='Title-Center'>{(Language == "Portuguese") ? "Projetos Pessoais" : "Personal Projects"}</h1>
+                        <h1 className='Title-Center m-0 p-0'>{(Language == "Portuguese") ? "Projetos Pessoais" : "Personal Projects"}</h1>
                     </div>
                     <PersonalProjects/>
                 </div>
                 
 
-                <div className="ProfessionalProjects">
+                <div className="ProfessionalProjects pt-0 ">
                     <div className='Div-Center'>
                             <span className='Title-Center'>{(Language == "Portuguese") ? "Projetos Profissionais" : "Professional Projects"}</span>
                     </div>
