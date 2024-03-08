@@ -16,7 +16,7 @@
     }
 
     50%{
-        opacity: 10%;
+        opacity: 20%;
     }
 
     100% {
@@ -30,7 +30,7 @@
 }
 
 .Video-Close-Icon { 
-    @apply fixed w-auto h-12  text-white md:hidden block mb-6 top-[2vh] bottom-[83vh];
+    @apply fixed w-full h-12 z-30  text-white md:hidden block mb-6 top-[90vh] bottom-[0vh]; /*  fixed w-auto h-12  text-white md:hidden block mb-6 top-[2vh] bottom-[83vh] */
 }
 
 .Description-Container {

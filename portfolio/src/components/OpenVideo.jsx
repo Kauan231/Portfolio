@@ -12,10 +12,11 @@ const OpenVideo = () => {
             Open && 
             <div>
                 <div className="Backdrop" onClick={() => SetOpen(false) }></div>
+                
                 <div className="Overlay-Container">
                     <div className="md:grid md:grid-cols-6">
                         <div className="Video-Container">
-                            <IoIosCloseCircle onClick={() => SetOpen(false) } className="Video-Close-Icon"></IoIosCloseCircle>
+                            
                             <ReactPlayer url={currentVideo.Video}  width='100%'height='100%' controls/>
                         </div>
                         <div className="Project-Container">
@@ -31,13 +32,12 @@ const OpenVideo = () => {
                                             <h1 className="Card-Button-Text">Github</h1>
                                         </a> 
                                     }
-                            </div>
-                            
-                            
+                                </div>
                         </div>
                     </div>
-                    </div>
                     
+                </div>
+                <IoIosCloseCircle onClick={() => SetOpen(false) } className="Video-Close-Icon"></IoIosCloseCircle>
             </div>
         }
         </>
