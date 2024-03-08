@@ -17,22 +17,23 @@ const PersonalProjects = () => {
     function Card({Title, Image, Item, Hidden}) {
         return (
             <div className={`Card ${Hidden ?  "hidden" : "flex flex-col "}` }> 
-                <picture style={{backgroundImage: "url('" + Image + "')"}} className='Card-Image'></picture>
                 <article className='Card-Article'>
                     <h1 className='Card-Title'>{Title}</h1>
                 </article>
+                <picture style={{backgroundImage: "url('" + Image + "')"}} className='Card-Image'></picture>
+                
                 
                 {
-                    Item.Video ? <div className="grid grid-cols-2 gap-5">
+                    Item.Video ? <div className="grid grid-cols-2 gap-0">
                                 <a href={Item.Link} className='Card-Button'>
                                     <span className='Card-Button-Text'>Github</span>
                                 </a>
-                                <button onClick={ () => { SetCurrentVideo(Item); SetOpen(true); } } className='Card-Button'>
+                                <button onClick={ () => { SetCurrentVideo(Item); SetOpen(true); } } className='Card-Button bg-gray-700'>
                                     <span className='Card-Button-Text'>{(Language == "Portuguese") ? "Visualizar" : "Show"}</span>
                                 </button>
                             </div> 
                             : 
-                            <a href={Item.Link} className='Card-Button'>
+                            <a href={Item.Link} className='Card-Button Clip-1'>
                                 <span className='Card-Button-Text'>Github</span>
                             </a>
                     

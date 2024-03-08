@@ -1,6 +1,8 @@
 import { useContext } from 'react';
 import { LanguageContext } from "../context/languageContext";
 import Photo from "../assets/home/documentos/1.jpg"
+import Resume from '../assets/home/documentos/Resume.pdf'
+import Curriculo from '../assets/home/documentos/Curriculo.pdf'
 import './style/About.css';
 
 export default function About() {
@@ -8,10 +10,8 @@ export default function About() {
     return (
         <> 
         
-        <section id="About" className="About"> 
-            <figure className="Figure">
-                <img  src={Photo} className="Image"></img>
-            </figure>
+        <section id="About" className="About pb-6"> 
+            
             <article className="Article">
                 <h1 className="H1">{(Language == "Portuguese") ?  "Sobre" : "About me"}</h1>
                 <p className="Paragraph">
@@ -31,9 +31,43 @@ export default function About() {
                     }
                 
                 </p>
+                {
+                    Language == "Portuguese" ? 
+                    <button className='Download-Button' onClick={
+                        (e) => {
+                            e.preventDefault();
+                            const link = document.createElement('a');
+                            link.download = "Curriculo.pdf";
+                            link.href = Curriculo;
+                            link.click();
+                        }
+                    }>
+                        <span className='Download-Button-Text'> Baixe meu curriculo</span>
+                    </button>
+                    :
+                    <button className='Download-Button' onClick={
+                        (e) => {
+                            e.preventDefault();
+                            const link = document.createElement('a');
+                            link.download = "Resume.pdf";
+                            link.href = Resume;
+                            link.click();
+                        }
+                    }>
+                        <span className='Download-Button-Text'> Download my Resume</span>
+                    </button>
+
+                }
+                
             </article>
         </section>
-        <div className="Arrow" id="Arrow"></div>
+        <div className="Arrow bg-stone-300" id="Arrow"></div>
         </>
     )
 }
+
+/*
+<figure className="Figure">
+                <img  src={Photo} className="Image"></img>
+            </figure> 
+*/

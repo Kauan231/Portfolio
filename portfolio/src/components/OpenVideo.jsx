@@ -28,7 +28,7 @@ const OpenVideo = () => {
                                     </p>
                                     {
                                         currentVideo.Link &&
-                                        <a href={currentVideo.Link} className="Card-Button mb-6"> 
+                                        <a href={currentVideo.Link} className="Card-Button mb-6 mt-6"> 
                                             <h1 className="Card-Button-Text">Github</h1>
                                         </a> 
                                     }

@@ -7,26 +7,43 @@ import { useContext } from 'react';
 import { LanguageContext } from "../context/languageContext";
 import './style/Projects.css';
 
+import { FaArrowAltCircleLeft } from "react-icons/fa";
+import { FaArrowAltCircleRight } from "react-icons/fa";
+
 const ProfessionalProjects = () => {
     const { SetCurrentVideo, SetOpen } = useContext(VideoContext);
-    const [CardLimit, SetCardLimit] = useState(2);
     const { Language } = useContext(LanguageContext);
-    
+
+    const [index, SetIndex] = useState(0);
+    const [items, SetItems] = useState([]);
+
+    useState(() => {
+        let ArrayOfProjects = workProjectsEN;
+        if(Language == "Portuguese")
+        {
+            ArrayOfProjects = workProjects;
+        }
+        let ItemsToShow = ArrayOfProjects.map((item, index) => 
+            <CardVideo Title={item.Title} Image={item.Image} Item={item} key={index}> </CardVideo>
+        )
+        SetItems(ItemsToShow);
+    }, [])
+
     function CardVideo({Title, Image, Item, Hidden}) {
         return (
             <>
-            <div className="hidden sm:block">
-                <div className={`SpecialCard relative z-0 ${Hidden ?  "hidden" : "flex flex-col"} `} onClick={ () => { SetCurrentVideo(Item); SetOpen(true); } }>
-                    <div className="bg-black/70 w-full h-full absolute z-10  justify-center items-center hidden sm:flex opacity-0 hover:opacity-100 duration-500 ">
-                        <h1 className='text-2xl font-bold text-white'>{(Language == "Portuguese") ? "Visualizar" : "Show"}</h1>
+            <div className="flex ">
+                <div className={`SpecialCard relative z-0 flex flex-col`} onClick={ () => { SetCurrentVideo(Item); SetOpen(true); } }>
+                    <div className="bg-black/70 w-full h-full absolute z-10 justify-center items-center hidden sm:flex opacity-0 hover:opacity-100 duration-500 ">
+                        <h1 className='absolute top-[50%] text-lg font-bold text-white'>{(Language == "Portuguese") ? "Visualizar" : "Show"}</h1>
+                        
+                        <h1 className='absolute top-[40%] text-2xl font-bold text-white'>{Title}</h1>
                     </div>
                     <picture style={{backgroundImage: "url('" + Image + "')"}} className='Card-Image'></picture>
-                    <div className='p-2 w-full mb-auto grid justify-center bg-gray-700'>
-                        <span className='font-bold text-2xl text-white'>{Title}</span>
-                    </div>
+                    
                 </div>
             </div>
-            <div className="block sm:hidden">
+            <div className="hidden sm:hidden">
                 <div className={`SpecialCard-SM ${Hidden ?  "hidden" : "flex flex-col"} `}>
                     <picture style={{backgroundImage: "url('" + Image + "')"}} className='Card-Image-SM'></picture>
                     <div className='p-10 w-full mb-auto grid justify-center'>
@@ -43,45 +60,60 @@ const ProfessionalProjects = () => {
         )
     }
 
-    function ShowCards({ArrayOfProjects}) {  
-        let ItemsToShow = ArrayOfProjects.map((item, index) => 
-            <CardVideo Title={item.Title} Image={item.Image} Item={item} key={index} Hidden={((index + 1)  > CardLimit)}> </CardVideo>
-        )
-    
-        if(ArrayOfProjects.length > CardLimit) {
-            return (
-                <>
-                <div className='SpecialCard-Grid'>
-                    {ItemsToShow}
-                </div>
-                <div className="ShowMore-Center">
-                    <button onClick={()=>{
-                        SetCardLimit(CardLimit+2);
-                    }} 
-                    className='ShowMore-Button'>
-                        <span className='Card-Button-Text'>{(Language == "Portuguese") ? "Mostrar mais" : "Show More"}</span>
-                    </button>
-                </div>
-                </>
-            )
-        }
-    
+    function FakeCard() {
         return (
-            <div className='SpecialCard-Grid'>
-                { ItemsToShow }
+            <>
+            <div className="hidden sm:flex ">
+                <div className={`SpecialCard relative z-0 flex flex-col`}>
+                    <div className="bg-slate-900 w-full h-full absolute z-10 justify-center items-center hidden sm:flex">
+                    </div>
+                    <picture className='Card-Image'></picture>
+                    
+                </div>
             </div>
+            <div className="block sm:hidden">
+                <div className={`SpecialCard-SM flex flex-col `}>
+                    <picture className='Card-Image-SM'></picture>
+                    <div className='p-10 w-full mb-auto grid justify-center'>
+                    </div>
+                </div>
+            </div>
+            
+            </>
+            
         )
     }
 
-    if(Language == "Portuguese") return <ShowCards ArrayOfProjects={workProjects} /> ;
-    return <ShowCards ArrayOfProjects={workProjectsEN} /> ;
+    function ShowCards() {  
+        return (
+            <>
+            <div className='SpecialCard-Grid hidden xl:flex'>
+                <FaArrowAltCircleLeft  onClick={ () => {SetIndex(index-2) }} className={`${(index - 2) >= 0 ? "flex" :  "hidden"} w-auto h-12 m-2`}/>
+                { items[index] ? 
+                items[index] : 
+                <FakeCard/>
+                }
+
+                { items[index+1] ? 
+                items[index+1] : 
+                <FakeCard/>
+                }
+                
+                <FaArrowAltCircleRight onClick={ () => {SetIndex(index+2) }} className={`${(index + 2) > items.length ? "hidden" : "flex"} w-auto h-12 m-2`}/>
+            </div>
+
+            <div className='SpecialCard-Grid xl:hidden'>
+                <FaArrowAltCircleLeft  onClick={ () => {SetIndex(index-1) }} className={`${(index - 1) < 0 ? "hidden" : "flex"} w-auto h-8 sm:h-[12] sm:pr-0 pr-2 m-2`}/>
+                { items[index]
+                }
+                
+                <FaArrowAltCircleRight onClick={ () => {SetIndex(index+1) }} className={`${(index + 2) >items.length ? "hidden" : "flex"} w-auto h-8 pl-2 m-2`}/>
+            </div>
+            </>
+        )
+    }
+
+    return <ShowCards />
 }
 
 export default ProfessionalProjects;
-
-
-/*
-<button onClick={ () => { SetCurrentVideo(Item); SetOpen(true); } } className='bg-gray-300 Card-Button'>
-    <span className='SpecialCard-Title'>{(Language == "Portuguese") ? "Visualizar" : "Show"}</span>
-</button>
-*/

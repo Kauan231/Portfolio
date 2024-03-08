@@ -1,18 +1,25 @@
 .About {
-    @apply h-auto w-full items-center justify-center lg:grid lg:grid-cols-2 flex flex-col sm:p-10 p-5  bg-neutral-300 ;
+    @apply h-auto w-full items-center justify-center lg:grid lg:grid-cols-6 flex flex-col   pt-12 pr-5 pl-5  bg-stone-300 ;
 }
 .Figure {
-    @apply col-span-1 lg:place-self-end lg:mr-24 ;
+    @apply col-span-2 lg:place-self-end lg:mr-24;
 }
 .Image {
     @apply h-auto md:w-[30vh] w-[30vw] align-middle rounded-full;
 }
 .Article {
-    @apply col-span-1 mt-8 md:mt-0;
+    @apply col-span-6 md:mt-0 w-full flex flex-wrap justify-center sm:pr-[15vw] sm:pl-[15vw] text-center;
 }
 .H1 {
-    @apply  lg:text-[2vw] sm:text-4xl text-2xl  underline-offset-4 underline font-semibold;
+    @apply  lg:text-5xl sm:text-4xl text-2xl  underline-offset-4 sm:no-underline underline font-semibold;
 }
 .Paragraph {
-    @apply font-thin lg:text-2xl mt-4;
+    @apply font-semibold lg:text-lg mt-4;
+}
+
+.Download-Button {
+    @apply mt-6 hover:translate-y-1 delay-75;
+}
+.Download-Button-Text {
+    @apply bg-black text-white rounded-md p-4 mt-2 flex;
 }

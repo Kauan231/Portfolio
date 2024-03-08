@@ -1,4 +1,4 @@
-import { useContext, useRef } from "react";
+import { useContext, useRef, useState } from "react";
 import { LanguageContext } from "../context/languageContext";
 import '../components/style/Skills.css'
 import useIsVisible from "../utils/Observer";
@@ -7,10 +7,12 @@ export default function Gamedev(){
     const ref1 = useRef();
     const isVisible1 = useIsVisible(ref1);
     const { Language } = useContext(LanguageContext);
+    const [Reveal, SetReveal] = useState(false);
+
     return (
         <article ref={ref1} className={`mb-20 Skills-Article transition-opacity ease-in duration-500 ${isVisible1 ? "opacity-100" : "opacity-0"}`}> 
             <h1 className="Skill-Title">GameDev </h1>
-            <aside className="Skills-Aside">
+            <aside className={`Skills-Aside  ${Reveal ? "Grow-Animation" : "h-[20vh] sm:[10vh] overflow-hidden" }`}>
                 {
                     (Language == "Portuguese") ? 
                     <>
@@ -59,7 +61,23 @@ export default function Gamedev(){
                     <li className="Stack-Item">Photoshop</li>
                     <li className="Stack-Item">Illustrator</li>
                 </ul>
+
+                
+                    {
+                        Reveal ?
+                        <div className="w-full h-12 z-10 mt-12" >
+                        <button onClick={() => { SetReveal(false) }} className="w-full h-full font-semibold text-2xl text-white bg-black/100">{(Language == "Portuguese") ? "Mostrar menos" : "Hide"}</button>
+                        </div>
+                        :
+                        <div className="w-full h-12 sticky top-0 bottom-0 left-0 right-0 z-10" >
+                        <button onClick={() => { SetReveal(true) }} className="w-full h-full font-semibold text-2xl text-white bg-black/80">{(Language == "Portuguese") ? "Mostrar mais" : "Show more"}</button>
+                        </div>
+                    }
+                    
+                
             </aside>  
+            
+            
         </article>
     )
 }

@@ -1,13 +1,14 @@
 #heroImg {
-    clip-path: polygon(20% 0, 0% 100%, 100% 100%, 100% 0%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%); /* clip-path: polygon(30% 0, 0% 100%, 100% 100%, 100% 0%);*/
+    @apply lg:flex hidden;
 }
 
 .Hero {
-    @apply h-auto w-auto md:grid md:grid-flow-row md:grid-cols-5 bg-stone-200 items-center flex flex-col;
+    @apply h-full w-full md:grid lg:grid-flow-row lg:grid-cols-5 bg-stone-200 pb-6 items-center flex flex-wrap justify-center ;
 }
 
 .Image-Container {
-    @apply md:col-span-3 md:pb-[5vh] align-top order-first md:order-last;
+    @apply md:col-span-3 md:pb-[0vh] h-full align-top order-first md:order-last;
 }
 
 .Hero-H1 {
@@ -23,13 +24,31 @@
 }
 
 .Animation-Container {
-    @apply md:pl-24 md:col-span-2 order-last mb-12;
+    @apply md:pl-24 md:col-span-2 order-last mb-12 w-auto;
 }
 
 
-.Download-Button {
-    @apply pt-4 hover:translate-y-1 delay-75;
+
+.SocialMedia-Icon {
+    @apply w-auto sm:h-8 h-6 hover:scale-90 transform transition duration-100;
 }
-.Download-Button-Text {
-    @apply bg-black text-white rounded-md p-2;
+
+.Align-Title {
+    @apply flex justify-center align-middle pt-2;
+}
+
+.Contacts-Title {
+    @apply flex justify-center align-middle ; /* sm:pt-12 pt-2 */
+}
+
+.SocialMedia-Title {
+    @apply font-semibold lg:text-lg hidden text-xl text-center;
+}
+
+.SocialMedia-Container {
+    @apply w-full flex-wrap flex justify-center align-middle; /* sm:pt-12 pt-2 p-6 */
+}
+
+.Align-Icons {
+    @apply grid grid-cols-4 justify-center align-middle sm:gap-5 lg:pl-20 pl-0 w-full; /* pb-12 flex flex-wrap flex-1 */
 }

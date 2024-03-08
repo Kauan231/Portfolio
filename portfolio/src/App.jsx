@@ -5,7 +5,6 @@ import AreasDeAtuacao from './components/AreasDeAtuacao'
 import About from './components/About'
 import Projetos from './components/Projetos'
 import Eventos from './components/Eventos'
-import Contato from './components/Contact'
 import Footer from './components/Footer'
 import { VideoProvider } from './context/videoContext.jsx'
 
@@ -19,7 +18,7 @@ function App() {
         <AreasDeAtuacao/>
         <Projetos/>
         
-        <Contato/>
+        
         <Footer/>
       </VideoProvider>
   )
@@ -28,3 +27,4 @@ function App() {
 export default App
 
 //<Eventos/>
+// <Contato/>

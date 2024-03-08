@@ -1,5 +1,4 @@
 import '../components/style/Hero.css'
-import Resume from '../assets/home/documentos/Resume.pdf'
 import { TypeAnimation } from 'react-type-animation';
 
 export default function HeroEN(){ 
@@ -24,17 +23,7 @@ export default function HeroEN(){
                 />
             </h1> 
         </div>
-        <button className='Download-Button' onClick={
-            (e) => {
-                e.preventDefault();
-                const link = document.createElement('a');
-                link.download = "Resume.pdf";
-                link.href = Resume;
-                link.click();
-            }
-        }>
-            <span className='Download-Button-Text'> Download my Resume</span>
-        </button>
+        
     </div>
     )
 }

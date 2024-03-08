@@ -39,11 +39,11 @@
 }
 
 .Navbar-Mobile-Flag{
-  @apply h-auto w-16 items-center font-medium p-2 text-white;
+  @apply h-auto  w-12 items-center font-medium  lg:pl-0 pt-2 pl-2 text-white;
 }
 
 .Center-Contents {
-  @apply flex w-full h-full items-center justify-center;
+  @apply flex flex-1 w-full h-full items-center justify-center;
 }
 
 .ShowMore-Mobile-Icon {

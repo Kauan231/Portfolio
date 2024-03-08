@@ -3,7 +3,7 @@
 }
 
 .Skills-Aside {
-    @apply lg:text-xl text-justify lg:pr-24 lg:border-black border-l-4 lg:pl-2 sm:p-4 p-2 sm:col-span-3 lg:ml-5;
+    @apply lg:text-xl text-justify lg:pr-24 lg:border-black border-l-4 lg:pl-4 pr-4 pl-4  sm:col-span-3 lg:ml-5;
 }
 
 .Skill-Title {
@@ -22,3 +22,19 @@
 }
 
 
+
+.Grow-Animation {
+    animation: GrowTransition ease 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    transform-origin: top;
+}
+
+@keyframes GrowTransition {
+    from {
+        transform: scale(1, 0.8);
+    }
+    to {
+        transform: scale(1, 1);;
+    }
+}

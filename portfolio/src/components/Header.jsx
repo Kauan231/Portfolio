@@ -33,9 +33,6 @@ export default function Header(){
                     <li>
                         <a href="#Skills" className="Navbar-Link">{(Language == "Portuguese") ? "Habilidades" : "Skills"}</a>
                     </li>
-                    <li>
-                        <a href="#Contacts" className="Navbar-Link">{(Language == "Portuguese") ? "Contato" : "Contacts"}</a>
-                    </li>
 
                     <li>
                     {(Language == "Portuguese") ? 
