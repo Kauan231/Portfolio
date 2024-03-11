@@ -2,6 +2,7 @@ import thumbCurriculum from '../projetos/Curriculo.png'
 import thumbStore from '../projetos/Store.jpg'
 import thumbBurguer from '../projetos/BurgerIcon.png'
 import thumbSnake from '../projetos/Snake.png'
+import thumbCourse from '../projetos/course.png'
 
 import thumbNave from '../projetos/NAVE.jpg'
 import thumbRoche from '../projetos/Roche.jpg'
@@ -10,6 +11,29 @@ import thumbYpe from '../projetos/Ype.jpg'
 import thumbTetris from '../projetos/Tetris.jfif'
 
 export const personalProjects = [
+    {
+        "Title": "Course-Platform",
+        "Description": 
+        <>
+        Este projeto foi desenvolvido para aprimorar minhas habilidades em desenvolvimento web full-stack.
+        <br/>
+        <br/>
+        Na parte frontend, utilizei React.js junto com Context API e React Router Dom para gerenciamento de estado e roteamento,
+        respectivamente. Para estilização, empreguei Tailwind CSS juntamente com CSS personalizado. Utilizei armazenamento local 
+        para salvar o progresso do usuário e cookies para gerenciar tokens JWT. A verificação de entrada foi realizada usando Yup.
+        <br/>
+        <br/>
+        Para o backend, empreguei Node.js com Express.js, utilizando Sequelize com SQLite para gerenciamento de banco de dados.
+        Senhas foram seguramente criptografadas usando a biblioteca Crypto, enquanto a validação de dados foi implementada usando Joi.
+        <br/>
+        <br/>
+        Em termos de testes, utilizei Jest junto com Supertest para uma cobertura de testes abrangente.
+        </>,
+        "Image": thumbCourse,
+        "Link": "https://github.com/Kauan231/Course-Platform",
+        "Video": "https://www.youtube.com/watch?v=EI1mtukspjs",
+        "Tag": "Web"
+    },
     {
         "Title": "Simple-Curriculum",
         "Description": 
