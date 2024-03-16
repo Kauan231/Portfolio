@@ -1,14 +1,14 @@
-import thumbCurriculum from '../projetos/Curriculo.png'
-import thumbStore from '../projetos/Store.jpg'
-import thumbBurguer from '../projetos/BurgerIcon.png'
-import thumbSnake from '../projetos/Snake.png'
-import thumbCourse from '../projetos/course.png'
+import thumbCurriculum from './images/Curriculo.png'
+import thumbStore from './images/Store.jpg'
+import thumbBurguer from './images/BurgerIcon.png'
+import thumbSnake from './images/Snake.png'
+import thumbCourse from './images/course.png'
 
-import thumbNave from '../projetos/NAVE.jpg'
-import thumbRoche from '../projetos/Roche.jpg'
-import thumbDragon from '../projetos/Dragon.jpg'
-import thumbYpe from '../projetos/Ype.jpg'
-import thumbTetris from '../projetos/Tetris.jfif'
+import thumbNave from './images/NAVE.jpg'
+import thumbRoche from './images/Roche.jpg'
+import thumbDragon from './images/Dragon.jpg'
+import thumbYpe from './images/Ype.jpg'
+import thumbTetris from './images/Tetris.jfif'
 
 export const personalProjects = [
     {

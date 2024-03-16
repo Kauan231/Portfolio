@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { LanguageContext } from "../context/languageContext";
-import Photo from "../assets/home/documentos/1.jpg"
+//import Photo from "../assets/home/documentos/1.jpg"
 import Resume from '../assets/home/documentos/Resume.pdf'
 import Curriculo from '../assets/home/documentos/Curriculo.pdf'
 import './style/About.css';
@@ -33,7 +33,7 @@ export default function About() {
                 </p>
                 {
                     Language == "Portuguese" ? 
-                    <button className='Download-Button' onClick={
+                    <button aria-label="Baixar currículo" className='Download-Button' onClick={
                         (e) => {
                             e.preventDefault();
                             const link = document.createElement('a');
@@ -45,7 +45,7 @@ export default function About() {
                         <span className='Download-Button-Text'> Baixe meu curriculo</span>
                     </button>
                     :
-                    <button className='Download-Button' onClick={
+                    <button aria-label="Download resume" className='Download-Button' onClick={
                         (e) => {
                             e.preventDefault();
                             const link = document.createElement('a');
@@ -65,9 +65,3 @@ export default function About() {
         </>
     )
 }
-
-/*
-<figure className="Figure">
-                <img  src={Photo} className="Image"></img>
-            </figure> 
-*/

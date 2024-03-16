@@ -25,22 +25,22 @@ export default function Header(){
             <div className='Center-Contents'>
                 <ul className="Navbar-Links ">
                     <li>
-                        <a href="#About" className="Navbar-Link">{(Language == "Portuguese") ? "Sobre" : "About"}</a>
+                        <a href="#About" aria-label={(Language == "Portuguese") ? "Sobre" : "About"} className="Navbar-Link">{(Language == "Portuguese") ? "Sobre" : "About"}</a>
                     </li>
                     <li>
-                        <a href="#Projects" className="Navbar-Link">{(Language == "Portuguese") ? "Projetos" : "Projects"}</a>
+                        <a href="#Projects" aria-label={(Language == "Portuguese") ? "Projetos" : "Projects"} className="Navbar-Link">{(Language == "Portuguese") ? "Projetos" : "Projects"}</a>
                     </li>
                     <li>
-                        <a href="#Skills" className="Navbar-Link">{(Language == "Portuguese") ? "Habilidades" : "Skills"}</a>
+                        <a href="#Skills" aria-label={(Language == "Portuguese") ? "Habilidades" : "Skills"} className="Navbar-Link">{(Language == "Portuguese") ? "Habilidades" : "Skills"}</a>
                     </li>
 
                     <li>
                     {(Language == "Portuguese") ? 
-                    <button onClick={SwitchLanguage}>
+                    <button aria-label='Switch Language' onClick={SwitchLanguage}>
                         <GB  className="Navbar-Mobile-Flag">Switch Language</GB>
                     </button>
                     :
-                    <button onClick={SwitchLanguage}>
+                    <button aria-label='Mudar Linguagem' onClick={SwitchLanguage}>
                         <PT className="Navbar-Mobile-Flag">Mudar Linguagem</PT>
                     </button>
                     }   
@@ -49,23 +49,22 @@ export default function Header(){
             </div>
         </nav>
         <nav className="Navbar-Mobile">
-            <button onClick={ () => SetShowNav(!ShowNav) }>
+            <button aria-label={(Language == "Portuguese") ? "Mostrar mais" : "Show More"} onClick={ () => SetShowNav(!ShowNav) }>
                 <VscThreeBars className='ShowMore-Mobile-Icon'></VscThreeBars>
             </button>
             <ul className={`${ShowNav ?  "grid" : "hidden"} Navbar-Mobile-Links`}>
-                <li><a href="#About" className="Navbar-Mobile-Link">{(Language == "Portuguese") ? "Sobre" : "About"}</a></li>
-                <li><a href="#Projects" className="Navbar-Mobile-Link">{(Language == "Portuguese") ? "Projetos" : "Projects"}</a></li>
-                <li><a href="#Skills" className="Navbar-Mobile-Link">{(Language == "Portuguese") ? "Habilidades" : "Expertise"}</a></li>
-                <li><a href="#Contacts" className="Navbar-Mobile-Link">{(Language == "Portuguese") ? "Contato" : "Contacts"}</a></li>
+                <li><a href="#About"    aria-label={(Language == "Portuguese") ? "Sobre" : "About"}         className="Navbar-Mobile-Link">{(Language == "Portuguese") ? "Sobre" : "About"}</a></li>
+                <li><a href="#Projects" aria-label={(Language == "Portuguese") ? "Projetos" : "Projects"}   className="Navbar-Mobile-Link">{(Language == "Portuguese") ? "Projetos" : "Projects"}</a></li>
+                <li><a href="#Skills"   aria-label={(Language == "Portuguese") ? "Habilidades" : "Skills"}  className="Navbar-Mobile-Link">{(Language == "Portuguese") ? "Habilidades" : "Skills"}</a></li>
                 {(Language == "Portuguese") ? 
                 <li>
-                    <button onClick={SwitchLanguage}>
+                    <button aria-label='Switch Language' onClick={SwitchLanguage}>
                         <GB  className="Navbar-Mobile-Flag">Switch Language</GB>
                     </button>
                 </li> 
                 :
                 <li>
-                    <button onClick={SwitchLanguage}>
+                    <button aria-label='Mudar Linguagem'  onClick={SwitchLanguage}>
                         <PT className="Navbar-Mobile-Flag">Mudar Linguagem</PT>
                     </button>
                 </li>

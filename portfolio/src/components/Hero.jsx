@@ -2,7 +2,7 @@ import HeroEN from "../dynamic_components/HeroEn";
 import HeroPT from "../dynamic_components/Hero";
 import { LanguageContext } from '../context/languageContext';
 import { useContext } from 'react';
-import ProgrammingPhoto from '../assets/home/Programming.jpeg'
+import ProgrammingPhoto from '../assets/home/Programming-optimized.jpeg'
 import './style/Hero.css';
 
 import { MdOutlineEmail } from "react-icons/md";
@@ -22,7 +22,7 @@ export default function Hero(){
             <div className="Align-Icons">
                 <div className="SocialMedia-Container">
                     <address>
-                    <a href="mailto:kauanramos03@outlook.com">
+                    <a aria-label="E-mail" href="mailto:kauanramos03@outlook.com">
                         <MdOutlineEmail className="SocialMedia-Icon"/>
                         <div className='Align-Title'>
                             <span className='SocialMedia-Title'>E-mail</span>
@@ -33,7 +33,7 @@ export default function Hero(){
 
                 <div className="SocialMedia-Container">
                     <address>
-                    <a href="https://wa.me/5513991492006">
+                    <a aria-label="Whatsapp" href="https://wa.me/5513991492006">
                         <FaWhatsapp className="SocialMedia-Icon"/>
                         <div className='Align-Title'>
                             <span className='SocialMedia-Title'>Whatsapp</span>
@@ -44,7 +44,7 @@ export default function Hero(){
 
                 <div className="SocialMedia-Container">
                     <address>
-                    <a href="https://www.linkedin.com/in/kauan-ramos/">
+                    <a aria-label="Linkedin" href="https://www.linkedin.com/in/kauan-ramos/">
                         <FaLinkedin className="SocialMedia-Icon"/>
                         <div className='Align-Title'>
                             <span className='SocialMedia-Title'>LinkedIn</span>
@@ -54,7 +54,7 @@ export default function Hero(){
                 </div>
                 <div className="SocialMedia-Container">
                     <address>
-                    <a href="https://github.com/Kauan231">
+                    <a aria-label="Github" href="https://github.com/Kauan231">
                         <FaGithub className="SocialMedia-Icon"/>
                         <div className='Align-Title'>
                             <span className='SocialMedia-Title'>Github</span>

@@ -23,9 +23,9 @@ export default function Frontend(){
                     I have experience with <b>ReactJS</b> and <b>Tailwind</b>, as well as experience applying designs created in Figma, 
                     Photoshop, and Illustrator for web interfaces and other software.
                     </>
-                }      
+                }  
                 <ul className="Stack-Items"> 
-                    <li className="Stack-Title">Stack:</li>
+                    <p className="Stack-Title">Stack:</p>
                     <li className="Stack-Item">ReactJS</li>
                     <li className="Stack-Item">Tailwind</li>
                     <li className="Stack-Item">HTML</li>

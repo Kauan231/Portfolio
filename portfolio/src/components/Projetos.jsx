@@ -28,9 +28,11 @@ export default function Projetos() {
                     </div>
                     <ProfessionalProjects/>
                 </div>
-                
                 <OpenVideo/>
+                
             </article>
         </section>
     )
 }
+
+//<OpenVideo/>

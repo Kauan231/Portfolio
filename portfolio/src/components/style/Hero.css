@@ -16,7 +16,7 @@
 }
 
 .Hero-H2 {
-    @apply md:text-[2vw] text-[3vw] font-medium opacity-30 text-left;
+    @apply md:text-xl text-lg font-medium text-left;
 }
 
 .Animation-Text {
