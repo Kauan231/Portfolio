@@ -18,7 +18,7 @@ function App() {
         <AreasDeAtuacao/>
         <Projetos/>
         <Footer/>
-      </VideoProvider>
+    </VideoProvider>
   )
 }
 

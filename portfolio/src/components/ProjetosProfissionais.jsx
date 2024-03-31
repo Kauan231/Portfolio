@@ -13,21 +13,7 @@ import { FaArrowAltCircleRight } from "react-icons/fa";
 const ProfessionalProjects = () => {
     const { SetCurrentVideo, SetOpen } = useContext(VideoContext);
     const { Language } = useContext(LanguageContext);
-
     const [index, SetIndex] = useState(0);
-    const [items, SetItems] = useState([]);
-
-    useState(() => {
-        let ArrayOfProjects = workProjectsEN;
-        if(Language == "Portuguese")
-        {
-            ArrayOfProjects = workProjects;
-        }
-        let ItemsToShow = ArrayOfProjects.map((item, index) => 
-            <CardVideo Title={item.Title} Image={item.Image} Item={item} key={index}> </CardVideo>
-        )
-        SetItems(ItemsToShow);
-    }, [])
 
     function CardVideo({Title, Image, Item, Hidden}) {
         return (
@@ -85,6 +71,16 @@ const ProfessionalProjects = () => {
     }
 
     function ShowCards() {  
+        let ArrayOfProjects = workProjectsEN;
+        if(Language == "Portuguese")
+        {
+            ArrayOfProjects = workProjects;
+        }
+        let ItemsToShow = ArrayOfProjects.map((item, index) => 
+            <CardVideo Title={item.Title} Image={item.Image} Item={item} key={index}> </CardVideo>
+        )
+        let items = ItemsToShow;
+
         return (
             <>
             <div className='SpecialCard-Grid hidden xl:flex'>
