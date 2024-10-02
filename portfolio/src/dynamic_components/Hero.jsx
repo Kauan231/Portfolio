@@ -3,7 +3,7 @@ import { TypeAnimation } from 'react-type-animation';
 
 export default function HeroPT(){ 
     return (
-        <div className='Animation-Container'>
+        <div className='Animation-Container md:pl-[25%]'>
             <h1 className="Hero-H1"> Olá,</h1> 
             <h2 className="Hero-H2"> meu nome é Kauan e sou um...</h2> 
             <div>

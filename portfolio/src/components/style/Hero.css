@@ -1,10 +1,10 @@
 #heroImg {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%); /* clip-path: polygon(30% 0, 0% 100%, 100% 100%, 100% 0%);*/
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%); /* clip-path: polygon(30% 0, 0% 100%, 100% 100%, 100% 0%);*/
     @apply lg:flex hidden;
 }
 
 .Hero {
-    @apply h-full w-full md:grid lg:grid-flow-row lg:grid-cols-5 bg-stone-200 pb-6 items-center flex flex-wrap justify-center ;
+    @apply h-full w-full  md:grid lg:grid-flow-row lg:grid-cols-8 bg-stone-200 pb-6 items-center flex flex-wrap justify-center ;
 }
 
 .Image-Container {
@@ -20,11 +20,11 @@
 }
 
 .Animation-Text {
-    @apply md:text-[2vw] font-medium text-left;
+    @apply md:text-[1.5vw] font-medium text-left;
 }
 
 .Animation-Container {
-    @apply md:pl-24 md:col-span-2 order-last mb-12 w-auto;
+    @apply md:pl-10 md:col-span-2 order-last mb-12 w-full;
 }
 
 
@@ -50,5 +50,5 @@
 }
 
 .Align-Icons {
-    @apply grid grid-cols-4 justify-center align-middle sm:gap-5 lg:pl-20 pl-0 w-full; /* pb-12 flex flex-wrap flex-1 */
+    @apply grid grid-cols-4 justify-center align-middle sm:gap-5 lg:pl-2 pl-0 w-full; /* pb-12 flex flex-wrap flex-1 */
 }
