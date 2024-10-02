@@ -52,7 +52,7 @@ export const personalProjectsEN = [
         </>,
         "Image": thumbStore,
         "Link": "https://github.com/Kauan231/Store-Management",
-        "Video": "https://youtu.be/Z-ZmqmdiBaM",
+        "Video": "https://youtu.be/XIBUFGX-Q0g",
         "Tag": "Other"
     },
     {
