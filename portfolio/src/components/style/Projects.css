@@ -4,9 +4,6 @@
 
 .Card {
     @apply h-auto bg-gray-600 sm:m-5 mb-10 rounded-tr-[5vh] rounded-bl-[5vh] border-2 border-gray-600 overflow-clip shadow-gray-400 shadow-[10px_10px_4px_0px];
-    animation: fadeInAnimation ease 1s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
 }
 
 @keyframes fadeInAnimation {
@@ -40,7 +37,7 @@
 }
 
 .Card-Button {
-    @apply bg-gray-600  border-t-2 text-center p-2 w-full hover:opacity-60 duration-500;   
+    @apply bg-gray-600  border-t-2 text-center p-2 w-full hover:opacity-60 duration-500;
 }
 
 
@@ -58,9 +55,6 @@
 
 .SpecialCard {
     @apply p-0 h-auto bg-white m-10 sm:mr-4 sm:ml-4 mb-10 rounded-[5vh] overflow-clip shadow-gray-600 shadow-[10px_10px_4px_0px] w-[40vw]; /* hover:-rotate-2 duration-500 */
-    animation: fadeInAnimation ease 1s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
 }
 
 .SpecialCard-Title {

@@ -14,7 +14,7 @@ function App() {
     <VideoProvider>
         <Header/>
         <Hero/>
-        <About/> 
+        <About/>
         <AreasDeAtuacao/>
         <Projetos/>
         <Footer/>

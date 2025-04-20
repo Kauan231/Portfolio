@@ -3,17 +3,42 @@ import { LanguageContext } from '../context/languageContext'
 import { useContext, useState } from 'react'
 import { GB, PT } from 'country-flag-icons/react/3x2'
 import { VscThreeBars } from "react-icons/vsc";
+import header from './content/header'
 
 export default function Header(){
     const {Language, SetLanguage} = useContext(LanguageContext);
     const [ShowNav, SetShowNav] = useState(false);
 
-    function SwitchLanguage() {
-        if(Language == "Portuguese") {
-            SetLanguage("English");
-        } else {
-            SetLanguage("Portuguese");
-        }
+    function ListItem(text, ref, isMobile) {
+        return (
+            <li>
+                <a href={ref} aria-label={text} className={isMobile ? "Navbar-Mobile-Link" : "Navbar-Link"}>{text}</a>
+            </li>
+        )
+    }
+
+    function NavItems() {
+        return header.Navlinks.map(navlink => ListItem(navlink[Language], navlink.href, false))
+    }
+
+    function NavItemsMobile() {
+        return header.Navlinks.map(navlink => ListItem(navlink[Language], navlink.href, true))
+    }
+
+    function Flag() {
+        return (
+            <li>
+            {(Language == "Portuguese") ?
+                <button aria-label='Switch Language' onClick={() => SetLanguage('English')}>
+                    <GB  className="Navbar-Mobile-Flag">Switch Language</GB>
+                </button>
+                :
+                <button aria-label='Mudar Linguagem' onClick={() => SetLanguage('Portuguese')}>
+                    <PT className="Navbar-Mobile-Flag">Mudar Linguagem</PT>
+                </button>
+                }
+            </li>
+        )
     }
 
     return (
@@ -24,27 +49,8 @@ export default function Header(){
             </div>
             <div className='Center-Contents'>
                 <ul className="Navbar-Links ">
-                    <li>
-                        <a href="#About" aria-label={(Language == "Portuguese") ? "Sobre" : "About"} className="Navbar-Link">{(Language == "Portuguese") ? "Sobre" : "About"}</a>
-                    </li>
-                    <li>
-                        <a href="#Projects" aria-label={(Language == "Portuguese") ? "Projetos" : "Projects"} className="Navbar-Link">{(Language == "Portuguese") ? "Projetos" : "Projects"}</a>
-                    </li>
-                    <li>
-                        <a href="#Skills" aria-label={(Language == "Portuguese") ? "Habilidades" : "Skills"} className="Navbar-Link">{(Language == "Portuguese") ? "Habilidades" : "Skills"}</a>
-                    </li>
-
-                    <li>
-                    {(Language == "Portuguese") ? 
-                    <button aria-label='Switch Language' onClick={SwitchLanguage}>
-                        <GB  className="Navbar-Mobile-Flag">Switch Language</GB>
-                    </button>
-                    :
-                    <button aria-label='Mudar Linguagem' onClick={SwitchLanguage}>
-                        <PT className="Navbar-Mobile-Flag">Mudar Linguagem</PT>
-                    </button>
-                    }   
-                    </li>
+                    <NavItems/>
+                    <Flag />
                 </ul>
             </div>
         </nav>
@@ -53,23 +59,8 @@ export default function Header(){
                 <VscThreeBars className='ShowMore-Mobile-Icon'></VscThreeBars>
             </button>
             <ul className={`${ShowNav ?  "grid" : "hidden"} Navbar-Mobile-Links`}>
-                <li><a href="#About"    aria-label={(Language == "Portuguese") ? "Sobre" : "About"}         className="Navbar-Mobile-Link">{(Language == "Portuguese") ? "Sobre" : "About"}</a></li>
-                <li><a href="#Projects" aria-label={(Language == "Portuguese") ? "Projetos" : "Projects"}   className="Navbar-Mobile-Link">{(Language == "Portuguese") ? "Projetos" : "Projects"}</a></li>
-                <li><a href="#Skills"   aria-label={(Language == "Portuguese") ? "Habilidades" : "Skills"}  className="Navbar-Mobile-Link">{(Language == "Portuguese") ? "Habilidades" : "Skills"}</a></li>
-                {(Language == "Portuguese") ? 
-                <li>
-                    <button aria-label='Switch Language' onClick={SwitchLanguage}>
-                        <GB  className="Navbar-Mobile-Flag">Switch Language</GB>
-                    </button>
-                </li> 
-                :
-                <li>
-                    <button aria-label='Mudar Linguagem'  onClick={SwitchLanguage}>
-                        <PT className="Navbar-Mobile-Flag">Mudar Linguagem</PT>
-                    </button>
-                </li>
-                }
-                
+                    <NavItemsMobile/>
+                <Flag />
             </ul>
         </nav>
     </header>

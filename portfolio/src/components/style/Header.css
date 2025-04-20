@@ -7,7 +7,7 @@
 }
 
 .Header {
-  @apply h-full sm:h-12 w-full bg-gray-700;
+  @apply h-full sm:h-12 w-full bg-zinc-900;
 }
 
 .Navbar {

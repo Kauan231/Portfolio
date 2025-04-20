@@ -18,24 +18,30 @@
 }
 
 .Stack-Item-About {
-    @apply lg:text-xl font-semibold p-1  pl-2 md:pr-8 bg-gray-800 text-white border rounded-lg hover:bg-opacity-50 duration-500;
+    box-shadow: rgba(22, 22, 22, 0.4) 5px 5px, rgba(22, 22, 22, 0.3) 10px 10px, rgba(22, 22, 22, 0.2) 15px 15px, rgba(22, 22, 22, 0.1) 20px 20px, rgba(22, 22, 22, 0.05) 25px 25px;
+    @apply lg:text-xl font-semibold pl-4  md:pr-4 bg-gray-800 text-white hover:bg-gray-600 duration-500 stroke-black;
 }
 
 .Stack-Item-About-Title {
-    @apply lg:text-xl font-semibold p-1  pl-2   border-blue-800 border-l-2  bg-white;
-}
-
-.Stack-Items-About {
-    @apply gap-2 flex flex-wrap justify-center sm:justify-normal mt-3;
+    @apply lg:text-xl font-semibold p-1  pl-2 mr-12 w-full;
 }
 
 .Download-Button {
-    @apply mt-6 hover:translate-y-1 delay-75;
+    @apply hover:translate-y-1 delay-75 max-h-12 lg:mt-12 mb-12 sm:w-full;
 }
 .Download-Button-Text {
-    @apply bg-black text-white rounded-md p-4 mt-2 flex;
+    @apply bg-gray-800 text-white rounded-md flex align-middle h-full;
 }
 
 .Stack-Items-About {
-    @apply gap-2 flex flex-wrap justify-center sm:justify-normal mt-3;
+    @apply gap-2 w-full flex flex-wrap justify-center sm:justify-normal mt-5 ;
+}
+
+.Photo {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    @apply pointer-events-none rounded-lg;
+}
+
+.PhotoContainer {
+    @apply lg:col-span-2 hidden lg:block;
 }
