@@ -1,10 +1,26 @@
 .ProfessionalProjects {
-    @apply w-full h-full pb-12 sm:pt-24 ; /* bg-gradient-to-b bg-stone-100 to-sky-200 */
+    @apply w-full h-full pb-12 sm:pt-24; /* bg-gradient-to-b bg-stone-100 to-sky-200 */
 }
 
 .Card {
-    @apply h-auto bg-gray-600 sm:m-5 mb-10 rounded-tr-[5vh] rounded-bl-[5vh] border-2 border-gray-600 overflow-clip shadow-gray-400 shadow-[10px_10px_4px_0px];
+    --neon-border-color: rgba(0, 255, 0);
+    box-shadow:
+            0 0 .1rem #ffffff,
+            inset 0 0 .1rem #ffffff;
+    @apply h-auto sm:m-5 mb-10 rounded-tr-[5vh] rounded-bl-[5vh];
 }
+.Card:hover {
+    --neon-border-color: rgba(255, 255, 255, 0.459);
+    box-shadow:
+            0 0 .1rem #ffffff,
+            inset 0 0 .1rem #ffffff,
+            0 0 0rem var(--neon-border-color),
+            inset 0 0 0rem var(--neon-border-color),
+            0 0 2rem var(--neon-border-color),
+            inset 0 0 0rem var(--neon-border-color);
+    @apply h-auto sm:m-5 mb-10 rounded-tr-[5vh] rounded-bl-[5vh];
+}
+
 
 @keyframes fadeInAnimation {
     0% {
@@ -17,7 +33,7 @@
 }
 
 .Card-Image {
-    @apply sm:h-[50vh] h-[20vh] border-gray-500 bg-black w-full  bg-cover bg-no-repeat bg-center sm:bg-left rounded-[0vh];
+    @apply sm:h-[50vh] h-[20vh] border-black bg-black w-full  bg-cover bg-no-repeat bg-center sm:bg-left rounded-[0vh];
 }
 
 .Card-Article {
@@ -25,7 +41,7 @@
 }
 
 .Card-Title {
-    @apply font-thin text-lg no-underline underline-offset-2 text-center text-white;
+    @apply text-lg text-white font-semibold no-underline underline-offset-2 text-center;
 }
 
 .Card-Paragraph {
@@ -37,7 +53,7 @@
 }
 
 .Card-Button {
-    @apply bg-gray-600  border-t-2 text-center p-2 w-full hover:opacity-60 duration-500 align-bottom;
+    @apply  border-t-2 text-center p-2 w-full hover:opacity-60 duration-500 align-bottom;
 }
 
 
@@ -50,11 +66,11 @@
 }
 
 .ShowMore-Button {
-    @apply bg-gray-900 rounded-2xl text-center p-3 w-1/2 h-1/2 hover:-rotate-2 duration-500;
+    @apply border-2 rounded-2xl text-center p-3 w-1/2 h-1/2 hover:-rotate-2 duration-500;
 }
 
 .SpecialCard {
-    @apply p-0 h-auto bg-white m-10 sm:mr-4 sm:ml-4 mb-10 rounded-[5vh] overflow-clip shadow-gray-600 shadow-[10px_10px_4px_0px] w-[40vw]; /* hover:-rotate-2 duration-500 */
+    @apply p-0 h-auto bg-white m-10 sm:mr-4 sm:ml-4 mb-10 rounded-[5vh] overflow-clip w-[40vw]; /* hover:-rotate-2 duration-500 */
 }
 
 .SpecialCard-Title {
@@ -66,11 +82,11 @@
 }
 
 .PersonalProjects {
-    @apply w-full h-full; /*  bg-gradient-to-b from-white/0 to-stone-100 */
+    @apply w-full h-full;
 }
 
 .SpecialCard-SM {
-    @apply p-5 h-auto w-[60vw] sm:w-[40vw] min-h-[60vh] max-h-[60vh]  bg-white sm:m-5 mb-10 rounded-[5vh] shadow-gray-600 shadow-[10px_10px_4px_0px] ;
+    @apply p-5 h-auto w-[60vw] sm:w-[40vw] min-h-[60vh] max-h-[60vh]  bg-white sm:m-5 mb-10 rounded-[5vh];
 }
 
 .SpecialCard-Title-SM {

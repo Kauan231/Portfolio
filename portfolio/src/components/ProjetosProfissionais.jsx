@@ -22,11 +22,11 @@ const ProfessionalProjects = () => {
                 <div className={`SpecialCard relative z-0 flex flex-col`} onClick={ () => { SetCurrentVideo(Item); SetOpen(true); } }>
                     <div className="bg-black/70 w-full h-full absolute z-10 justify-center items-center hidden sm:flex opacity-0 hover:opacity-100 duration-500 ">
                         <h1 className='absolute top-[50%] text-lg font-bold text-white'>{(Language == "Portuguese") ? "Visualizar" : "Show"}</h1>
-                        
+
                         <h1 className='absolute top-[40%] text-2xl font-bold text-white'>{Title}</h1>
                     </div>
                     <picture style={{backgroundImage: "url('" + Image + "')"}} className='Card-Image'></picture>
-                    
+
                 </div>
             </div>
             <div className="hidden sm:hidden">
@@ -40,21 +40,21 @@ const ProfessionalProjects = () => {
                     </button>
                 </div>
             </div>
-            
+
             </>
-            
+
         )
     }
 
     function FakeCard() {
         return (
             <>
-            <div className="hidden sm:flex ">
+            <div className="hidden sm:flex">
                 <div className={`SpecialCard relative z-0 flex flex-col`}>
-                    <div className="bg-slate-900 w-full h-full absolute z-10 justify-center items-center hidden sm:flex">
+                    <div className="bg-black w-full h-full absolute z-10 justify-center items-center hidden sm:flex">
                     </div>
                     <picture className='Card-Image'></picture>
-                    
+
                 </div>
             </div>
             <div className="block sm:hidden">
@@ -64,19 +64,19 @@ const ProfessionalProjects = () => {
                     </div>
                 </div>
             </div>
-            
+
             </>
-            
+
         )
     }
 
-    function ShowCards() {  
+    function ShowCards() {
         let ArrayOfProjects = workProjectsEN;
         if(Language == "Portuguese")
         {
             ArrayOfProjects = workProjects;
         }
-        let ItemsToShow = ArrayOfProjects.map((item, index) => 
+        let ItemsToShow = ArrayOfProjects.map((item, index) =>
             <CardVideo Title={item.Title} Image={item.Image} Item={item} key={index}> </CardVideo>
         )
         let items = ItemsToShow;
@@ -84,26 +84,26 @@ const ProfessionalProjects = () => {
         return (
             <>
             <div className='SpecialCard-Grid hidden xl:flex'>
-                <FaArrowAltCircleLeft  onClick={ () => {SetIndex(index-2) }} className={`${(index - 2) >= 0 ? "flex" :  "hidden"} w-auto h-12 m-2`}/>
-                { items[index] ? 
-                items[index] : 
+                <FaArrowAltCircleLeft  onClick={ () => {SetIndex(index-2) }} className={`${(index - 2) >= 0 ? "flex" :  "hidden"} w-auto h-12 m-2 text-white`}/>
+                { items[index] ?
+                items[index] :
                 <FakeCard/>
                 }
 
-                { items[index+1] ? 
-                items[index+1] : 
+                { items[index+1] ?
+                items[index+1] :
                 <FakeCard/>
                 }
-                
-                <FaArrowAltCircleRight onClick={ () => {SetIndex(index+2) }} className={`${(index + 2) > items.length ? "hidden" : "flex"} w-auto h-12 m-2`}/>
+
+                <FaArrowAltCircleRight onClick={ () => {SetIndex(index+2) }} className={`${(index + 2) > items.length ? "hidden" : "flex"} w-auto h-12 m-2 text-white`}/>
             </div>
 
             <div className='SpecialCard-Grid xl:hidden'>
-                <FaArrowAltCircleLeft  onClick={ () => {SetIndex(index-1) }} className={`${(index - 1) < 0 ? "hidden" : "flex"} w-auto h-8 sm:h-[12] sm:pr-0 pr-2 m-2`}/>
+                <FaArrowAltCircleLeft  onClick={ () => {SetIndex(index-1) }} className={`${(index - 1) < 0 ? "hidden" : "flex"} w-auto h-8 sm:h-[12] sm:pr-0 pr-2 m-2 text-white`}/>
                 { items[index]
                 }
-                
-                <FaArrowAltCircleRight onClick={ () => {SetIndex(index+1) }} className={`${(index + 2) >items.length ? "hidden" : "flex"} w-auto h-8 pl-2 m-2`}/>
+
+                <FaArrowAltCircleRight onClick={ () => {SetIndex(index+1) }} className={`${(index + 2) >items.length ? "hidden" : "flex"} w-auto h-8 pl-2 m-2 text-white`}/>
             </div>
             </>
         )

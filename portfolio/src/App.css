@@ -16,3 +16,8 @@
     clip-path: polygon(50% 100%, 0 0, 100% 0);
     @apply bg-stone-300 sm:h-[20vh] h-[10vh] w-auto ;
 }
+
+.Divider {
+    clip-path: polygon(0 0, 100% 0, 100% 23%, 0 46%);
+    @apply sm:h-[20vh] h-[10vh] w-auto ;
+}
