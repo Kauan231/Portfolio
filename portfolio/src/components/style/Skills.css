@@ -15,7 +15,7 @@
 }
 
 .Stack-Item {
-    @apply lg:text-xl text-justify font-semibold p-1 bg-slate-300 border rounded-lg hover:bg-opacity-50 duration-500;
+    @apply lg:text-xl text-justify font-semibold p-1 bg-slate-300 border rounded-lg hover:bg-opacity-50 duration-500 cursor-default;
 }
 .Stack-Items {
     @apply gap-2 flex flex-wrap justify-center sm:justify-normal mt-6;
