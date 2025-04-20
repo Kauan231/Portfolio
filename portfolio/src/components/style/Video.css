@@ -1,5 +1,5 @@
 .Video-Container {
-    @apply flex flex-1 flex-wrap  md:grid md:col-span-4 justify-center lg:justify-normal pr-2 pl-2 sm:pt-0 pt-2 md:pl-0 md:pr-0 h-[75vh] min-[1920px]:h-full w-full md:min-h-[60vh] md:min-w-[60vw] bg-slate-200 ; 
+    @apply flex flex-1 flex-wrap md:grid md:col-span-4 justify-center lg:justify-normal pr-2 pl-2 sm:pt-0 pt-2 md:pl-0 md:pr-0 h-[75vh] min-[1920px]:h-full w-full md:min-h-[60vh] md:min-w-[60vw] h-[30%] bg-slate-200 ;
 }
 
 .Overlay-Container {
@@ -29,7 +29,7 @@
     @apply fixed right-0 top-0 left-0 bottom-0 z-10 bg-black/80 ;
 }
 
-.Video-Close-Icon { 
+.Video-Close-Icon {
     @apply fixed w-full h-12 z-30  text-white md:hidden block mb-6 top-[85vh] bottom-[0vh]; /*  fixed w-auto h-12  text-white md:hidden block mb-6 top-[2vh] bottom-[83vh] */
 }
 

@@ -37,7 +37,7 @@
 }
 
 .Card-Button {
-    @apply bg-gray-600  border-t-2 text-center p-2 w-full hover:opacity-60 duration-500;
+    @apply bg-gray-600  border-t-2 text-center p-2 w-full hover:opacity-60 duration-500 align-bottom;
 }
 
 

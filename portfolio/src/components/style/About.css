@@ -1,5 +1,5 @@
 .About {
-    @apply h-full w-full  lg:grid lg:grid-cols-6 flex flex-col  pt-12 pr-5 pl-5  bg-stone-300 ;
+    @apply h-full w-full  lg:grid lg:grid-cols-6 flex flex-col  pt-12 pr-5 pl-5  bg-stone-300;
 }
 .Figure {
     @apply col-span-2 lg:place-self-end lg:mr-24;
@@ -8,7 +8,7 @@
     @apply h-auto md:w-[30vh] w-[30vw] align-middle rounded-full;
 }
 .Article {
-    @apply lg:col-span-5 col-span-8 md:mt-0 w-full flex flex-wrap justify-center sm:pr-[2vw] sm:pl-[2vw] text-justify ;
+    @apply lg:col-span-5 col-span-8 md:mt-0 w-full flex flex-wrap justify-center sm:pr-[2vw] sm:pl-[2vw] text-justify;
 }
 .H1 {
     @apply  lg:text-5xl sm:text-4xl text-2xl  underline-offset-4 sm:no-underline underline font-semibold;
@@ -19,22 +19,22 @@
 
 .Stack-Item-About {
     box-shadow: rgba(22, 22, 22, 0.4) 5px 5px, rgba(22, 22, 22, 0.3) 10px 10px, rgba(22, 22, 22, 0.2) 15px 15px, rgba(22, 22, 22, 0.1) 20px 20px, rgba(22, 22, 22, 0.05) 25px 25px;
-    @apply lg:text-xl font-semibold pl-4  md:pr-4 bg-gray-800 text-white hover:bg-gray-600 duration-500 stroke-black;
+    @apply italic font-semibold pl-4  md:pr-4 border-dashed bg-white border-2 border-black/20 text-black hover:border-black duration-500 stroke-black cursor-default;
 }
 
 .Stack-Item-About-Title {
-    @apply lg:text-xl font-semibold p-1  pl-2 mr-12 w-full;
+    @apply lg:text-xl font-bold p-1  pl-2 mr-12 w-full border-b-2 border-black/40 border-dotted ;
 }
 
 .Download-Button {
     @apply hover:translate-y-1 delay-75 max-h-12 lg:mt-12 mb-12 sm:w-full;
 }
 .Download-Button-Text {
-    @apply bg-gray-800 text-white rounded-md flex align-middle h-full;
+    @apply bg-gray-800 text-white rounded-md flex align-middle h-full sm:mt-2;
 }
 
 .Stack-Items-About {
-    @apply gap-2 w-full flex flex-wrap justify-center sm:justify-normal mt-5 ;
+    @apply gap-2 w-full flex flex-wrap justify-center sm:justify-normal mt-5 mb-8;
 }
 
 .Photo {
@@ -44,4 +44,9 @@
 
 .PhotoContainer {
     @apply lg:col-span-2 hidden lg:block;
+}
+
+.StackConteiner {
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+    @apply hidden 2xl:grid w-full justify-items-center p-5 border-dashed rounded-lg bg-white;
 }

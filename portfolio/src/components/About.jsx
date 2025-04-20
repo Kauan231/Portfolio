@@ -40,11 +40,11 @@ export default function About() {
                     <h1 className="H1 lg:text-[4vw] md:text-[6vw] text-2xl">{about.About[Language].title}</h1>
                     <div className='ml-[5%] mr-[5%]'>
                         <div className='w-full justify-items-center grid'>
-                            <p className="md:text-2xl font-normal  lg-pt-0 md:pt-12 md:pb-2 pt-4 border-black">
+                            <p className="md:text-2xl font-normal  lg-pt-0 md:pt-12 md:pb-2 pt-4">
                                 {about.About[Language].content}
                             </p>
                             <br></br>
-                            <div className='hidden md:grid w-full justify-items-center p-5 border-t-2 border-black border-b-2 border-dashed'>
+                            <div className='StackConteiner'>
                                 <p className="md:text-3xl text-xl font-semibold w-full">
                                     Stack:
                                 </p>

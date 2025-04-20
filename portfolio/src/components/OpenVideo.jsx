@@ -9,14 +9,12 @@ const OpenVideo = () => {
     return (
         <>
         {
-            Open && 
+            Open &&
             <div>
                 <div className="Backdrop" onClick={() => SetOpen(false) }></div>
-                
                 <div className="Overlay-Container">
                     <div className="md:grid md:grid-cols-6">
                         <div className="Video-Container">
-                            
                             <ReactPlayer url={currentVideo.Video}  width='100%'height='100%' controls/>
                         </div>
                         <div className="Project-Container">
@@ -28,14 +26,13 @@ const OpenVideo = () => {
                                     </p>
                                     {
                                         currentVideo.Link &&
-                                        <a href={currentVideo.Link} className="Card-Button mb-6 mt-6"> 
+                                        <a href={currentVideo.Link} className="Card-Button mb-6 mt-6">
                                             <h1 className="Card-Button-Text">Github</h1>
-                                        </a> 
+                                        </a>
                                     }
                                 </div>
                         </div>
                     </div>
-                    
                 </div>
                 <IoIosCloseCircle onClick={() => SetOpen(false) } className="Video-Close-Icon"></IoIosCloseCircle>
             </div>
