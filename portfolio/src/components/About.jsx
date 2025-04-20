@@ -17,7 +17,7 @@ export default function About() {
     function UnorderedList(title, items) {
         return (
             <ul className="Stack-Items-About">
-                <p className="Stack-Item-About-Title">{title}</p>
+                <p className="Stack-Item-About-Title">{'>'+ title}</p>
                 {
                     items.map((item, index) => {
                         return (
@@ -34,18 +34,18 @@ export default function About() {
     }
 
     return (
-        <div ref={ref1} className={`transition-opacity ease-in duration-500 ${isVisible1 ? "opacity-100" : "opacity-0"} `}>
+        <div ref={ref1} className={`transition-opacity ease-in duration-500 ${isVisible1 ? "opacity-100" : "opacity-80"} `}>
             <section id="About" ref={ref1} className={`About md:pt-24 pb-6 grid grid-cols-8`}>
                 <article className="Article">
                     <h1 className="H1 lg:text-[4vw] md:text-[6vw] text-2xl">{about.About[Language].title}</h1>
                     <div className='ml-[5%] mr-[5%]'>
                         <div className='w-full justify-items-center grid'>
-                            <p className="md:text-2xl font-normal  lg-pt-0 md:pt-12 md:pb-2 pt-4">
+                            <p className="md:text-2xl font-normal  lg-pt-0 md:pt-12 md:pb-2 pt-4 text-white">
                                 {about.About[Language].content}
                             </p>
                             <br></br>
                             <div className='StackConteiner'>
-                                <p className="md:text-3xl text-xl font-semibold w-full">
+                                <p className="md:text-3xl text-xl font-semibold w-full text-white">
                                     Stack:
                                 </p>
                                 <div className='mb-12 w-full'>
@@ -77,7 +77,7 @@ export default function About() {
                         <img src={Photo} className='Photo'/>
                 </div>
             </section>
-            <div className="Arrow bg-stone-300 -translate-y-1" id="Arrow"></div>
+            <div className="Arrow bg-black -translate-y-1" id="Arrow"></div>
         </div>
     )
 }

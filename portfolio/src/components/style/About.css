@@ -1,5 +1,5 @@
 .About {
-    @apply h-full w-full  lg:grid lg:grid-cols-6 flex flex-col  pt-12 pr-5 pl-5  bg-stone-300;
+    @apply h-full w-full  lg:grid lg:grid-cols-6 flex flex-col  pt-12 pr-5 pl-5 bg-black;
 }
 .Figure {
     @apply col-span-2 lg:place-self-end lg:mr-24;
@@ -11,26 +11,25 @@
     @apply lg:col-span-5 col-span-8 md:mt-0 w-full flex flex-wrap justify-center sm:pr-[2vw] sm:pl-[2vw] text-justify;
 }
 .H1 {
-    @apply  lg:text-5xl sm:text-4xl text-2xl  underline-offset-4 sm:no-underline underline font-semibold;
+    @apply  lg:text-5xl sm:text-4xl text-2xl  underline-offset-4 sm:no-underline underline font-semibold text-white;
 }
 .Paragraph {
     @apply font-semibold lg:text-lg;
 }
 
 .Stack-Item-About {
-    box-shadow: rgba(22, 22, 22, 0.4) 5px 5px, rgba(22, 22, 22, 0.3) 10px 10px, rgba(22, 22, 22, 0.2) 15px 15px, rgba(22, 22, 22, 0.1) 20px 20px, rgba(22, 22, 22, 0.05) 25px 25px;
-    @apply italic font-semibold pl-4  md:pr-4 border-dashed bg-white border-2 border-black/20 text-black hover:border-black duration-500 stroke-black cursor-default;
+    @apply italic font-semibold pl-4  md:pr-4 border-2 text-black stroke-black cursor-default text-[rgb(0,255,0)] opacity-50 hover:opacity-100;
 }
 
 .Stack-Item-About-Title {
-    @apply lg:text-xl font-bold p-1  pl-2 mr-12 w-full border-b-2 border-black/40 border-dotted ;
+    @apply lg:text-xl font-bold p-1  pl-2 mr-12 w-full border-b-2 border-white border-dotted text-white;
 }
 
 .Download-Button {
     @apply hover:translate-y-1 delay-75 max-h-12 lg:mt-12 mb-12 sm:w-full;
 }
 .Download-Button-Text {
-    @apply bg-gray-800 text-white rounded-md flex align-middle h-full sm:mt-2;
+    @apply border-white border-2 text-white font-bold rounded-md flex align-middle h-full sm:mt-2;
 }
 
 .Stack-Items-About {
@@ -38,15 +37,27 @@
 }
 
 .Photo {
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     @apply pointer-events-none rounded-lg;
 }
 
 .PhotoContainer {
-    @apply lg:col-span-2 hidden lg:block;
+    @apply lg:col-span-2 hidden lg:block transition duration-300 ease-in-out hover:scale-[102%] hover:opacity-100 opacity-50;
 }
 
 .StackConteiner {
-    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
-    @apply hidden 2xl:grid w-full justify-items-center p-5 border-dashed rounded-lg bg-white;
+    --b: 8px;  /* border thickness*/
+    --s: 60px; /* size of the corner*/
+    --g: 14px; /* the gap*/
+    --c: #ffffff;
+
+    padding: calc(var(--b) + var(--g));
+    background-image:
+        conic-gradient(from  90deg at top    var(--b) left  var(--b),#0000 25%,var(--c) 0),
+        conic-gradient(from -90deg at bottom var(--b) right var(--b),#0000 25%,var(--c) 0);
+    background-position:
+        var(--_p,0%) var(--_p,0%),
+        calc(100% - var(--_p,0%)) calc(100% - var(--_p,0%));
+    background-size: var(--s) var(--s);
+    background-repeat: no-repeat;
+    @apply hidden 2xl:grid w-full justify-items-center p-12 border-dashed rounded-lg;
 }
