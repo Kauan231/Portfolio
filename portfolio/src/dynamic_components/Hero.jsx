@@ -1,13 +1,13 @@
 import '../components/style/Hero.css'
 import { TypeAnimation } from 'react-type-animation';
 
-export default function HeroPT(){ 
+export default function HeroPT(){
     return (
-        <div className='Animation-Container md:pl-[25%]'>
-            <h1 className="Hero-H1"> Olá,</h1> 
-            <h2 className="Hero-H2"> meu nome é Kauan e sou um...</h2> 
+        <div className='Animation-Container md:pl-[25%] cursor-default'>
+            <h1 className="Hero-H1"> Olá,</h1>
+            <h2 className="Hero-H2"> meu nome é Kauan e sou um...</h2>
             <div>
-                <h1 className="Animation-Text"> 
+                <h1 className="Animation-Text">
                 <TypeAnimation
                 sequence={[
                     'Desenvolvedor Frontend',
@@ -21,9 +21,9 @@ export default function HeroPT(){
                 speed={20}
                 repeat={Infinity}
                     />
-                </h1> 
+                </h1>
             </div>
-            
+
         </div>
     )
 }

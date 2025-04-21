@@ -2,7 +2,7 @@ let content = {
     About:{
         Portuguese: {
             title: 'Sobre',
-            content: 'Sou desenvolvedor Full Stack com mais de três anos de experiência no mercado, desenvolvendo aplicações web e sistemas corporativos. Atuo em todas as etapas do projeto, do levantamento de requisitos ao deploy e manutenção. Sempre com foco em performance, segurança e boas práticas de desenvolvimento.'
+            content: 'Sou desenvolvedor Full Stack com mais de três anos de experiência de mercado, desenvolvendo aplicações web e sistemas corporativos. Atuo em todas as etapas do projeto, do levantamento de requisitos ao deploy e manutenção. Sempre com foco em performance, segurança e boas práticas de desenvolvimento.'
         },
         English: {
             title: 'About me',

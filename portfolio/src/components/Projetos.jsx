@@ -17,7 +17,7 @@ export default function Projetos() {
 
     return (
             <>
-                <section className="bg-black">
+                <section className="bg-black cursor-default" id="Projects">
                     <div className="Divider -translate-y-1 bg-white"></div>
                     <article className="bg-black">
                         <div ref={ref1} className={`transition-opacity ease-in duration-500 ${isVisible1 ? "opacity-100" : "opacity-10"} `}>

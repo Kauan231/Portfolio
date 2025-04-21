@@ -9,7 +9,7 @@ export default function Frontend(){
 
     const { Language } = useContext(LanguageContext);
     return (
-        <article ref={ref1} className={`mb-20 Skills-Article transition-opacity ease-in duration-700 ${isVisible1 ? "opacity-100" : "opacity-0"}`} >
+        <article ref={ref1} className={`mb-20 Skills-Article transition-opacity ease-in duration-700 ${isVisible1 ? "opacity-100" : "opacity-0"} cursor-default`} >
             <h1 className="Skill-Title">Frontend </h1>
             <aside className="Skills-Aside">
                 {

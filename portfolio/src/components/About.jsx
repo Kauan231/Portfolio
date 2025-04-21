@@ -34,7 +34,7 @@ export default function About() {
     }
 
     return (
-        <div ref={ref1} className={`transition-opacity ease-in duration-500 ${isVisible1 ? "opacity-100" : "opacity-80"} `}>
+        <div ref={ref1} className={`transition-opacity ease-in duration-500 ${isVisible1 ? "opacity-100" : "opacity-80"} cursor-default `}>
             <section id="About" ref={ref1} className={`About md:pt-24 pb-6 grid grid-cols-8`}>
                 <article className="Article">
                     <h1 className="H1 lg:text-[4vw] md:text-[6vw] text-2xl">{about.About[Language].title}</h1>

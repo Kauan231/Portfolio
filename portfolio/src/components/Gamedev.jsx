@@ -10,7 +10,7 @@ export default function Gamedev(){
     const [Reveal, SetReveal] = useState(false);
 
     return (
-        <article ref={ref1} className={`mb-20 Skills-Article transition-opacity ease-in duration-500 ${isVisible1 ? "opacity-100" : "opacity-0"}`}>
+        <article ref={ref1} className={`mb-20 Skills-Article transition-opacity ease-in duration-500 ${isVisible1 ? "opacity-100" : "opacity-0"} cursor-default`}>
             <h1 className="Skill-Title">GameDev </h1>
             <aside className={`Skills-Aside  ${Reveal ? "Grow-Animation" : "h-[20vh] sm:[10vh] overflow-hidden" }`}>
                 {

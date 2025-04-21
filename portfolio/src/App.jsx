@@ -7,7 +7,7 @@ import Projetos from './components/Projetos'
 import Eventos from './components/Eventos'
 import Footer from './components/Footer'
 import { VideoProvider } from './context/videoContext.jsx'
-
+import Career from './components/Career'
 
 function App() {
   return (
@@ -17,6 +17,7 @@ function App() {
         <About/>
         <AreasDeAtuacao/>
         <Projetos/>
+        <Career/>
         <Footer/>
     </VideoProvider>
   )

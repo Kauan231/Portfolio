@@ -14,6 +14,11 @@ let content = {
             Portuguese: 'Habilidades',
             English: 'Skills',
             href: '#Skills'
+        },
+        {
+            Portuguese: 'Experiência',
+            English: 'Career',
+            href: '#Career'
         }
     ]
 }
